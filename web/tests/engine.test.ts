@@ -21,9 +21,9 @@ import {
 } from './node-deps'
 
 // Recorded traces were produced on one machine; int8 matrix kernels give
-// slightly different floats on other CPU architectures (about 1e-3 in cosine),
+// slightly different floats on other CPU architectures (up to about 0.015 in cosine),
 // which can swap near-tied chunks and nudge a query's 2D placement.
-const SCORE_TOL = 5e-3
+const SCORE_TOL = 0.02
 const POS_TOL = 0.06 // the map spans [-1, 1]
 
 const ev = <P extends Trace['events'][number]['phase']>(t: Trace, phase: P) =>
