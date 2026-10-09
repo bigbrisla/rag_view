@@ -58,8 +58,8 @@ flowchart LR
 The browser and Python implementations are tested against each other:
 
 - chunk boundaries match the shared fixtures character for character ([`shared/fixtures/`](shared/fixtures));
-- browser and Python embeddings agree to about 5e-7;
-- the browser engine **reproduces every recorded Python trace**: same trace id, same retrieved chunks, same prompt text and token counts, same answer.
+- browser and Python embeddings agree to about 5e-7 on the same machine;
+- the browser engine **reproduces every recorded Python trace**: same trace id, same retrieved chunks, same prompt text and token counts, same answer. On a different CPU architecture the int8 kernels drift by up to about 0.015 in cosine, enough to swap near-tied chunks, so CI checks the same properties within that tolerance.
 
 ## Design choices
 
