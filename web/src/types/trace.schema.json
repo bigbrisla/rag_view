@@ -19,7 +19,10 @@
           "description": "Citation marker: source number"
         }
       },
-      "required": ["text", "cite"],
+      "required": [
+        "text",
+        "cite"
+      ],
       "title": "AnswerToken",
       "type": "object"
     },
@@ -43,7 +46,13 @@
           "type": "boolean"
         }
       },
-      "required": ["chunk", "doc", "score", "rank", "above_threshold"],
+      "required": [
+        "chunk",
+        "doc",
+        "score",
+        "rank",
+        "above_threshold"
+      ],
       "title": "Candidate",
       "type": "object"
     },
@@ -62,7 +71,11 @@
           "type": "integer"
         }
       },
-      "required": ["start", "end", "tokens"],
+      "required": [
+        "start",
+        "end",
+        "tokens"
+      ],
       "title": "ChunkSpan",
       "type": "object"
     },
@@ -87,7 +100,10 @@
           "type": "boolean"
         },
         "strategy": {
-          "enum": ["sentence", "fixed"],
+          "enum": [
+            "sentence",
+            "fixed"
+          ],
           "type": "string"
         },
         "chunk_size": {
@@ -153,7 +169,13 @@
           "type": "integer"
         }
       },
-      "required": ["n", "chunk", "doc", "start", "end"],
+      "required": [
+        "n",
+        "chunk",
+        "doc",
+        "start",
+        "end"
+      ],
       "title": "Citation",
       "type": "object"
     },
@@ -171,7 +193,11 @@
           "type": "integer"
         }
       },
-      "required": ["name", "version", "n_docs"],
+      "required": [
+        "name",
+        "version",
+        "n_docs"
+      ],
       "title": "CorpusRef",
       "type": "object"
     },
@@ -197,7 +223,10 @@
           "type": "integer"
         },
         "pooling": {
-          "enum": ["cls", "mean"],
+          "enum": [
+            "cls",
+            "mean"
+          ],
           "type": "string"
         },
         "normalized": {
@@ -240,7 +269,10 @@
           "type": "string"
         },
         "generator": {
-          "enum": ["scripted", "extractive"],
+          "enum": [
+            "scripted",
+            "extractive"
+          ],
           "type": "string"
         },
         "simulated": {
@@ -248,7 +280,11 @@
           "type": "boolean"
         },
         "status": {
-          "enum": ["answered", "partial", "refused"],
+          "enum": [
+            "answered",
+            "partial",
+            "refused"
+          ],
           "type": "string"
         },
         "tokens": {
@@ -325,7 +361,15 @@
           "$ref": "#/$defs/ProjectionInfo"
         }
       },
-      "required": ["duration_ms", "phase", "index", "n_vectors", "dim", "bytes", "projection"],
+      "required": [
+        "duration_ms",
+        "phase",
+        "index",
+        "n_vectors",
+        "dim",
+        "bytes",
+        "projection"
+      ],
       "title": "IndexingEvent",
       "type": "object"
     },
@@ -340,7 +384,10 @@
           "type": "boolean"
         }
       },
-      "required": ["text", "illustrative"],
+      "required": [
+        "text",
+        "illustrative"
+      ],
       "title": "NoRagAnswer",
       "type": "object"
     },
@@ -364,7 +411,10 @@
         },
         "strategy": {
           "default": "sentence",
-          "enum": ["sentence", "fixed"],
+          "enum": [
+            "sentence",
+            "fixed"
+          ],
           "type": "string"
         },
         "top_k": {
@@ -414,7 +464,10 @@
           "type": "number"
         }
       },
-      "required": ["x", "y"],
+      "required": [
+        "x",
+        "y"
+      ],
       "title": "Point",
       "type": "object"
     },
@@ -442,7 +495,13 @@
           "type": "string"
         }
       },
-      "required": ["method", "n_neighbors", "min_dist", "metric", "fitted_on"],
+      "required": [
+        "method",
+        "n_neighbors",
+        "min_dist",
+        "metric",
+        "fitted_on"
+      ],
       "title": "ProjectionInfo",
       "type": "object"
     },
@@ -466,7 +525,13 @@
           "type": "integer"
         }
       },
-      "required": ["n", "chunk", "doc", "title", "tokens"],
+      "required": [
+        "n",
+        "chunk",
+        "doc",
+        "title",
+        "tokens"
+      ],
       "title": "PromptChunk",
       "type": "object"
     },
@@ -608,7 +673,14 @@
           "type": "array"
         }
       },
-      "required": ["duration_ms", "phase", "enabled", "model", "items", "selected"],
+      "required": [
+        "duration_ms",
+        "phase",
+        "enabled",
+        "model",
+        "items",
+        "selected"
+      ],
       "title": "RerankEvent",
       "type": "object"
     },
@@ -716,7 +788,12 @@
           "type": "integer"
         }
       },
-      "required": ["system", "context", "question", "total"],
+      "required": [
+        "system",
+        "context",
+        "question",
+        "total"
+      ],
       "title": "TokenCounts",
       "type": "object"
     },
@@ -734,7 +811,10 @@
           "type": "array"
         }
       },
-      "required": ["chunk", "preview"],
+      "required": [
+        "chunk",
+        "preview"
+      ],
       "title": "VectorSample",
       "type": "object"
     }
@@ -754,11 +834,17 @@
       "type": "string"
     },
     "source": {
-      "enum": ["live", "replay"],
+      "enum": [
+        "live",
+        "replay"
+      ],
       "type": "string"
     },
     "engine": {
-      "enum": ["python", "browser"],
+      "enum": [
+        "python",
+        "browser"
+      ],
       "type": "string"
     },
     "corpus": {
