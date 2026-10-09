@@ -1,0 +1,62 @@
+{
+ "preset": "sentence-256-38",
+ "queries": [
+  {
+   "text": "When did Voyager 1 enter interstellar space?",
+   "top": [
+    101,
+    100,
+    117,
+    111,
+    110,
+    112,
+    105,
+    102,
+    109,
+    106
+   ],
+   "position": [
+    -0.4229,
+    0.0009
+   ]
+  },
+  {
+   "text": "rocket engines burning kerosene",
+   "top": [
+    180,
+    351,
+    346,
+    284,
+    313,
+    319,
+    288,
+    116,
+    330,
+    359
+   ],
+   "position": [
+    0.0721,
+    -0.3718
+   ]
+  },
+  {
+   "text": "pizza",
+   "top": [
+    35,
+    215,
+    81,
+    70,
+    47,
+    336,
+    147,
+    53,
+    247,
+    361
+   ],
+   "position": [
+    -0.4683,
+    0.1934
+   ]
+  }
+ ]
+}

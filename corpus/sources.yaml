@@ -1,0 +1,61 @@
+# Curated corpus: Wikipedia articles about space exploration.
+# `category` is editorial metadata used only to colour points in the 2D map;
+# positions come from the embeddings, so clusters emerge on their own.
+# Run `uv run ragview fetch` to (re)download; the fetched revision ids are
+# written to corpus/ATTRIBUTION.md.
+license: CC BY-SA 4.0
+max_words: 1500
+categories:
+  bodies: Planets & moons
+  robotic: Robotic missions
+  crewed: Crewed spaceflight
+  rockets: Launch vehicles
+  people: People
+documents:
+  - {title: "Mercury (planet)", category: bodies}
+  - {title: "Venus", category: bodies}
+  - {title: "Moon", category: bodies}
+  - {title: "Mars", category: bodies}
+  - {title: "Jupiter", category: bodies}
+  - {title: "Saturn", category: bodies}
+  - {title: "Europa (moon)", category: bodies}
+  - {title: "Titan (moon)", category: bodies}
+  - {title: "Enceladus", category: bodies}
+  - {title: "Pluto", category: bodies}
+  - {title: "Sputnik 1", category: robotic}
+  - {title: "Voyager 1", category: robotic}
+  - {title: "Voyager 2", category: robotic}
+  - {title: "Galileo (spacecraft)", category: robotic}
+  - {title: "Cassini–Huygens", category: robotic}
+  - {title: "Mars Pathfinder", category: robotic}
+  - {title: "Curiosity (rover)", category: robotic}
+  - {title: "Perseverance (rover)", category: robotic}
+  - {title: "New Horizons", category: robotic}
+  - {title: "Juno (spacecraft)", category: robotic}
+  - {title: "Rosetta (spacecraft)", category: robotic}
+  - {title: "Hubble Space Telescope", category: robotic}
+  - {title: "James Webb Space Telescope", category: robotic}
+  - {title: "Vostok 1", category: crewed}
+  - {title: "Project Mercury", category: crewed}
+  - {title: "Project Gemini", category: crewed}
+  - {title: "Apollo program", category: crewed}
+  - {title: "Apollo 11", category: crewed}
+  - {title: "Apollo 13", category: crewed}
+  - {title: "Skylab", category: crewed}
+  - {title: "Mir", category: crewed}
+  - {title: "Space Shuttle Challenger disaster", category: crewed}
+  - {title: "International Space Station", category: crewed}
+  - {title: "Artemis program", category: crewed}
+  - {title: "R-7 Semyorka", category: rockets}
+  - {title: "Saturn V", category: rockets}
+  - {title: "Titan (rocket family)", category: rockets}
+  - {title: "Soyuz (rocket family)", category: rockets}
+  - {title: "Falcon 9", category: rockets}
+  - {title: "Space Launch System", category: rockets}
+  - {title: "Yuri Gagarin", category: people}
+  - {title: "Valentina Tereshkova", category: people}
+  - {title: "Sergei Korolev", category: people}
+  - {title: "Wernher von Braun", category: people}
+  - {title: "Neil Armstrong", category: people}
+  - {title: "Katherine Johnson", category: people}
+  - {title: "Margaret Hamilton (software engineer)", category: people}

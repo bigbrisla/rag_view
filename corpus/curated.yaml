@@ -1,0 +1,183 @@
+# Curated questions for the demo.
+#
+# Generation in RAGView is simulated (no LLM is called). For these questions the
+# ScriptedGenerator holds a hand-written answer split into *claims*. Each claim
+# lists exact quotes from the corpus as evidence; the build resolves them to
+# character spans and fails if a quote is not found verbatim.
+#
+# At query time a claim is stated only if ALL of its evidence spans are covered by
+# the chunks that actually made it into the prompt. Retrieval quality therefore
+# changes the answer for real: shrink the chunks or lower top-k and claims drop out.
+#
+# `no_rag` is an illustrative, hand-written answer of the kind an LLM gives
+# from parametric memory alone. It is labelled as such in the UI.
+
+questions:
+  - id: voyager-interstellar
+    question: When did Voyager 1 enter interstellar space?
+    featured: true
+    claims:
+      - topic: when it crossed the heliopause
+        text: Voyager 1 crossed the heliopause and entered interstellar space on August 25, 2012, the first spacecraft ever to do so.
+        evidence:
+          - doc: voyager-1
+            quote: Voyager 1 crossed the heliopause and entered interstellar space on August 25, 2012, making it the first spacecraft to do so.
+      - topic: where it is now
+        text: As of August 2026 it is about 171 AU from Earth, the most distant human-made object.
+        evidence:
+          - doc: voyager-1
+            quote: At a distance of 171.19 AU (25.6 billion km; 15.9 billion mi) as of August 2026, it is the most distant human-made object from Earth.
+    no_rag: >-
+      Voyager 1 left the Solar System in 2013, becoming the first human-made
+      object to reach interstellar space.
+    no_rag_note: Mixes up NASA's 2013 announcement with the 2012 crossing, and gives no source to check.
+
+  - id: apollo-13
+    question: Why was the Apollo 13 Moon landing aborted?
+    featured: true
+    claims:
+      - topic: what failed
+        text: The landing was aborted after an oxygen tank in the service module exploded two days into the mission, disabling its electrical and life-support system.
+        evidence:
+          - doc: apollo-13
+            quote: the landing was aborted after an oxygen tank in the service module (SM) exploded two days into the mission, disabling its electrical and life-support system.
+      - topic: what caused the explosion
+        text: A routine stir of the tank ignited damaged wire insulation inside it, and the explosion vented both of the service module's oxygen tanks to space.
+        evidence:
+          - doc: apollo-13
+            quote: A routine stir of an oxygen tank ignited damaged wire insulation inside it, causing an explosion that vented the contents of both of the SM's oxygen tanks to space.
+      - topic: the investigation's findings
+        text: An investigative review board later found fault with the preflight testing of the oxygen tank and with Teflon being placed inside it.
+        evidence:
+          - doc: apollo-13
+            quote: An investigative review board found fault with preflight testing of the oxygen tank and Teflon being placed inside it.
+    no_rag: >-
+      Apollo 13's landing was cancelled because of an explosion on board
+      ("Houston, we've had a problem"). The crew looped around the Moon and
+      returned safely.
+    no_rag_note: Broadly right but vague, with no cause and no findings. Nothing in it can be traced to a source.
+
+  - id: hamilton
+    question: What did Margaret Hamilton contribute to the Apollo program?
+    featured: true
+    claims:
+      - topic: her role on Apollo
+        text: Margaret Hamilton directed the Software Engineering Division at the MIT Instrumentation Laboratory and led the development of the on-board flight software for the Apollo Guidance Computer.
+        evidence:
+          - doc: margaret-hamilton-software-engineer
+            quote: She directed the Software Engineering Division at the MIT Instrumentation Laboratory, where she led the development of the on-board flight software for NASA's Apollo Guidance Computer for the Apollo program.
+      - topic: the term "software engineering"
+        text: She coined the term "software engineering" to give software the same standing as other engineering disciplines.
+        evidence:
+          - doc: margaret-hamilton-software-engineer
+            quote: She coined the term "software engineering"
+      - topic: recognition
+        text: In 2016 she received the Presidential Medal of Freedom for that work.
+        evidence:
+          - doc: margaret-hamilton-software-engineer
+            quote: On November 22, 2016, Hamilton received the Presidential Medal of Freedom from President Barack Obama for her work leading to the development of on-board flight software for NASA's Apollo moon missions.
+    no_rag: >-
+      Margaret Hamilton wrote the software for the Apollo missions and is
+      credited with coining the term "software engineering".
+    no_rag_note: Correct, but a reader cannot verify it. Even when the model already knows the answer, RAG adds traceability.
+
+  - id: europa
+    question: Could Europa have liquid water?
+    featured: true
+    claims:
+      - topic: the subsurface ocean
+        text: Very likely. The youth and smoothness of Europa's surface are attributed to a water ocean beneath the ice, which could conceivably harbor life.
+        evidence:
+          - doc: europa-moon
+            quote: The apparent youth and smoothness of the surface is due to a water ocean beneath the surface, which could conceivably harbor extraterrestrial life.
+      - topic: what keeps it liquid
+        text: The leading model is that heat from tidal flexing keeps the ocean liquid.
+        evidence:
+          - doc: europa-moon
+            quote: The predominant model suggests that heat from tidal flexing causes the ocean to remain liquid
+      - topic: plumes
+        text: The Hubble Space Telescope has also detected water vapor plumes, similar to those seen on Enceladus.
+        evidence:
+          - doc: europa-moon
+            quote: the Hubble Space Telescope detected water vapor plumes similar to those observed on Saturn's moon Enceladus
+    no_rag: >-
+      Yes, scientists believe Europa has a salty liquid-water ocean under its
+      icy crust, possibly twice the volume of Earth's oceans.
+    no_rag_note: Plausible, but the "twice the volume" detail cannot be checked against the knowledge base.
+
+  - id: mercury-ambiguous
+    question: When was Mercury first explored?
+    claims:
+      - topic: the planet Mercury
+        text: If you mean the planet, the first successful flyby was made by Mariner 10 in 1974.
+        evidence:
+          - doc: mercury-planet
+            quote: The first successful flyby of Mercury was conducted by Mariner 10 in 1974
+      - topic: NASA's Project Mercury
+        text: If you mean NASA's Project Mercury, its first astronaut, Alan Shepard, flew a suborbital flight on May 5, 1961, shortly after Gagarin's orbit.
+        evidence:
+          - doc: project-mercury
+            quote: The Soviet Union put the first human, cosmonaut Yuri Gagarin, into a single orbit aboard Vostok 1 on April 12, 1961.
+          - doc: project-mercury
+            quote: Shortly after this, on May 5, the US launched its first astronaut, Alan Shepard, on a suborbital flight.
+    no_rag: Mercury was first explored by the Mariner 10 probe in 1974.
+    no_rag_note: Silently picks one meaning of "Mercury" and never mentions the other.
+
+  - id: titan-gemini
+    question: Which Titan launched the Gemini astronauts?
+    claims:
+      - topic: the launch vehicle
+        text: Gemini crews flew on the Titan II GLV, a modified intercontinental ballistic missile.
+        evidence:
+          - doc: project-gemini
+            quote: Their launch vehicle was the Titan II GLV, a modified intercontinental ballistic missile.
+      - topic: the Titan family
+        text: Titan rockets launched all Project Gemini crewed flights in the mid-1960s.
+        evidence:
+          - doc: titan-rocket-family
+            quote: including all Project Gemini crewed flights in the mid-1960s
+    no_rag: The Gemini astronauts were launched on Titan II rockets.
+    no_rag_note: Right but terse; the question is ambiguous for a retriever (Titan is also Saturn's moon).
+
+  - id: pizza
+    question: What is the best pizza in Naples?
+    claims: []
+    no_rag: >-
+      Many would point to L'Antica Pizzeria da Michele or Gino Sorbillo, both
+      famous for classic Neapolitan margherita.
+    no_rag_note: Answers confidently from memory. A RAG system scoped to space exploration should decline instead.
+
+# Guided failure cases: a question plus parameter overrides, and what to look at.
+failure_cases:
+  - id: tiny-chunks
+    question: apollo-13
+    params: {chunk_size: 48, overlap: 0, top_k: 3}
+    title: Chunks too small
+    lesson: >-
+      With 48-token chunks every sentence is retrieved on its own. The top 3
+      fragments merely sound similar (one is about Apollo 11!) and the passages
+      holding the evidence never reach the prompt. Lose the context around a
+      fact and retrieval stops finding it.
+  - id: ambiguous
+    question: mercury-ambiguous
+    params: {}
+    title: Ambiguous question
+    lesson: >-
+      "Mercury" is both a planet and a NASA programme. Watch the retrieval lines
+      reach into two different regions of the map: the context mixes topics.
+  - id: out-of-corpus
+    question: pizza
+    params: {}
+    title: Out of corpus
+    lesson: >-
+      Nothing in the corpus is about pizza. Every similarity is below the
+      threshold, so the system declines. Set the threshold to 0: retrieval
+      ALWAYS returns something, however irrelevant.
+  - id: rerank-titan
+    question: titan-gemini
+    params: {rerank: true}
+    title: Reranking to the rescue
+    lesson: >-
+      Vector search confuses Titan the moon with Titan the rocket. The
+      cross-encoder reads question and passage together and pushes the rocket
+      passages to the top. Toggle reranking off to compare.

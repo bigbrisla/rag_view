@@ -1,0 +1,97 @@
+{
+ "n_questions": 47,
+ "rerank_pool": 20,
+ "level": "chunk",
+ "rows": [
+  {
+   "preset": "sentence-48-0",
+   "rerank": false,
+   "n_chunks": 2507,
+   "hit@1": 0.617,
+   "hit@3": 0.894,
+   "hit@5": 0.957,
+   "mrr@10": 0.764
+  },
+  {
+   "preset": "sentence-48-0",
+   "rerank": true,
+   "n_chunks": 2507,
+   "hit@1": 0.702,
+   "hit@3": 0.894,
+   "hit@5": 0.979,
+   "mrr@10": 0.817
+  },
+  {
+   "preset": "sentence-128-19",
+   "rerank": false,
+   "n_chunks": 854,
+   "hit@1": 0.702,
+   "hit@3": 0.915,
+   "hit@5": 0.936,
+   "mrr@10": 0.817
+  },
+  {
+   "preset": "sentence-128-19",
+   "rerank": true,
+   "n_chunks": 854,
+   "hit@1": 0.723,
+   "hit@3": 0.936,
+   "hit@5": 0.957,
+   "mrr@10": 0.835
+  },
+  {
+   "preset": "sentence-256-38",
+   "rerank": false,
+   "n_chunks": 428,
+   "hit@1": 0.702,
+   "hit@3": 0.872,
+   "hit@5": 0.936,
+   "mrr@10": 0.807
+  },
+  {
+   "preset": "sentence-256-38",
+   "rerank": true,
+   "n_chunks": 428,
+   "hit@1": 0.851,
+   "hit@3": 0.936,
+   "hit@5": 0.957,
+   "mrr@10": 0.902
+  },
+  {
+   "preset": "sentence-448-67",
+   "rerank": false,
+   "n_chunks": 246,
+   "hit@1": 0.745,
+   "hit@3": 0.894,
+   "hit@5": 0.915,
+   "mrr@10": 0.823
+  },
+  {
+   "preset": "sentence-448-67",
+   "rerank": true,
+   "n_chunks": 246,
+   "hit@1": 0.915,
+   "hit@3": 0.936,
+   "hit@5": 0.936,
+   "mrr@10": 0.932
+  },
+  {
+   "preset": "fixed-256-38",
+   "rerank": false,
+   "n_chunks": 429,
+   "hit@1": 0.702,
+   "hit@3": 0.915,
+   "hit@5": 0.957,
+   "mrr@10": 0.815
+  },
+  {
+   "preset": "fixed-256-38",
+   "rerank": true,
+   "n_chunks": 429,
+   "hit@1": 0.83,
+   "hit@3": 0.936,
+   "hit@5": 0.936,
+   "mrr@10": 0.879
+  }
+ ]
+}

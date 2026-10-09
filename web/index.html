@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RAGView: watch a RAG pipeline work</title>
+    <meta
+      name="description"
+      content="An interactive, animated walkthrough of a retrieval-augmented generation pipeline: chunking, embeddings, vector search, reranking, prompt and answer, computed for real in your browser."
+    />
+    <meta name="color-scheme" content="dark light" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <script>
+      // Multi-threaded inference needs cross-origin isolation; on hosts without
+      // COOP/COEP headers a service worker adds them (reloads once on first visit).
+      if (!window.crossOriginIsolated && window.isSecureContext && 'serviceWorker' in navigator) {
+        navigator.serviceWorker.register(new URL('coi-sw.js', document.baseURI)).then((reg) => {
+          let reloaded = false
+          try {
+            reloaded = sessionStorage.getItem('coi-reload') === '1'
+            sessionStorage.setItem('coi-reload', '1')
+          } catch {}
+          if (!reloaded && (reg.active || reg.installing || reg.waiting)) location.reload()
+        }, () => {})
+      }
+      try {
+        const t = localStorage.getItem('ragview-theme')
+        if (t === 'dark' || t === 'light') document.documentElement.dataset.theme = t
+      } catch {}
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

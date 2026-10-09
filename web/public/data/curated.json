@@ -1,0 +1,272 @@
+{
+ "questions": [
+  {
+   "id": "voyager-interstellar",
+   "question": "When did Voyager 1 enter interstellar space?",
+   "featured": true,
+   "no_rag": "Voyager 1 left the Solar System in 2013, becoming the first human-made object to reach interstellar space.",
+   "no_rag_note": "Mixes up NASA's 2013 announcement with the 2012 crossing, and gives no source to check.",
+   "claims": [
+    {
+     "topic": "when it crossed the heliopause",
+     "text": "Voyager 1 crossed the heliopause and entered interstellar space on August 25, 2012, the first spacecraft ever to do so.",
+     "evidence": [
+      {
+       "doc": "voyager-1",
+       "start": 1248,
+       "end": 1372
+      }
+     ]
+    },
+    {
+     "topic": "where it is now",
+     "text": "As of August 2026 it is about 171 AU from Earth, the most distant human-made object.",
+     "evidence": [
+      {
+       "doc": "voyager-1",
+       "start": 422,
+       "end": 555
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "apollo-13",
+   "question": "Why was the Apollo 13 Moon landing aborted?",
+   "featured": true,
+   "no_rag": "Apollo 13's landing was cancelled because of an explosion on board (\"Houston, we've had a problem\"). The crew looped around the Moon and returned safely.",
+   "no_rag_note": "Broadly right but vague, with no cause and no findings. Nothing in it can be traced to a source.",
+   "claims": [
+    {
+     "topic": "what failed",
+     "text": "The landing was aborted after an oxygen tank in the service module exploded two days into the mission, disabling its electrical and life-support system.",
+     "evidence": [
+      {
+       "doc": "apollo-13",
+       "start": 205,
+       "end": 362
+      }
+     ]
+    },
+    {
+     "topic": "what caused the explosion",
+     "text": "A routine stir of the tank ignited damaged wire insulation inside it, and the explosion vented both of the service module's oxygen tanks to space.",
+     "evidence": [
+      {
+       "doc": "apollo-13",
+       "start": 756,
+       "end": 920
+      }
+     ]
+    },
+    {
+     "topic": "the investigation's findings",
+     "text": "An investigative review board later found fault with the preflight testing of the oxygen tank and with Teflon being placed inside it.",
+     "evidence": [
+      {
+       "doc": "apollo-13",
+       "start": 1939,
+       "end": 2057
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hamilton",
+   "question": "What did Margaret Hamilton contribute to the Apollo program?",
+   "featured": true,
+   "no_rag": "Margaret Hamilton wrote the software for the Apollo missions and is credited with coining the term \"software engineering\".",
+   "no_rag_note": "Correct, but a reader cannot verify it. Even when the model already knows the answer, RAG adds traceability.",
+   "claims": [
+    {
+     "topic": "her role on Apollo",
+     "text": "Margaret Hamilton directed the Software Engineering Division at the MIT Instrumentation Laboratory and led the development of the on-board flight software for the Apollo Guidance Computer.",
+     "evidence": [
+      {
+       "doc": "margaret-hamilton-software-engineer",
+       "start": 114,
+       "end": 321
+      }
+     ]
+    },
+    {
+     "topic": "the term \"software engineering\"",
+     "text": "She coined the term \"software engineering\" to give software the same standing as other engineering disciplines.",
+     "evidence": [
+      {
+       "doc": "margaret-hamilton-software-engineer",
+       "start": 577,
+       "end": 619
+      }
+     ]
+    },
+    {
+     "topic": "recognition",
+     "text": "In 2016 she received the Presidential Medal of Freedom for that work.",
+     "evidence": [
+      {
+       "doc": "margaret-hamilton-software-engineer",
+       "start": 831,
+       "end": 1033
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "europa",
+   "question": "Could Europa have liquid water?",
+   "featured": true,
+   "no_rag": "Yes, scientists believe Europa has a salty liquid-water ocean under its icy crust, possibly twice the volume of Earth's oceans.",
+   "no_rag_note": "Plausible, but the \"twice the volume\" detail cannot be checked against the knowledge base.",
+   "claims": [
+    {
+     "topic": "the subsurface ocean",
+     "text": "Very likely. The youth and smoothness of Europa's surface are attributed to a water ocean beneath the ice, which could conceivably harbor life.",
+     "evidence": [
+      {
+       "doc": "europa-moon",
+       "start": 751,
+       "end": 898
+      }
+     ]
+    },
+    {
+     "topic": "what keeps it liquid",
+     "text": "The leading model is that heat from tidal flexing keeps the ocean liquid.",
+     "evidence": [
+      {
+       "doc": "europa-moon",
+       "start": 899,
+       "end": 992
+      }
+     ]
+    },
+    {
+     "topic": "plumes",
+     "text": "The Hubble Space Telescope has also detected water vapor plumes, similar to those seen on Enceladus.",
+     "evidence": [
+      {
+       "doc": "europa-moon",
+       "start": 1335,
+       "end": 1442
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mercury-ambiguous",
+   "question": "When was Mercury first explored?",
+   "featured": false,
+   "no_rag": "Mercury was first explored by the Mariner 10 probe in 1974.",
+   "no_rag_note": "Silently picks one meaning of \"Mercury\" and never mentions the other.",
+   "claims": [
+    {
+     "topic": "the planet Mercury",
+     "text": "If you mean the planet, the first successful flyby was made by Mariner 10 in 1974.",
+     "evidence": [
+      {
+       "doc": "mercury-planet",
+       "start": 2979,
+       "end": 3052
+      }
+     ]
+    },
+    {
+     "topic": "NASA's Project Mercury",
+     "text": "If you mean NASA's Project Mercury, its first astronaut, Alan Shepard, flew a suborbital flight on May 5, 1961, shortly after Gagarin's orbit.",
+     "evidence": [
+      {
+       "doc": "project-mercury",
+       "start": 1031,
+       "end": 1147
+      },
+      {
+       "doc": "project-mercury",
+       "start": 1148,
+       "end": 1252
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "titan-gemini",
+   "question": "Which Titan launched the Gemini astronauts?",
+   "featured": false,
+   "no_rag": "The Gemini astronauts were launched on Titan II rockets.",
+   "no_rag_note": "Right but terse; the question is ambiguous for a retriever (Titan is also Saturn's moon).",
+   "claims": [
+    {
+     "topic": "the launch vehicle",
+     "text": "Gemini crews flew on the Titan II GLV, a modified intercontinental ballistic missile.",
+     "evidence": [
+      {
+       "doc": "project-gemini",
+       "start": 1239,
+       "end": 1328
+      }
+     ]
+    },
+    {
+     "topic": "the Titan family",
+     "text": "Titan rockets launched all Project Gemini crewed flights in the mid-1960s.",
+     "evidence": [
+      {
+       "doc": "titan-rocket-family",
+       "start": 374,
+       "end": 434
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pizza",
+   "question": "What is the best pizza in Naples?",
+   "featured": false,
+   "no_rag": "Many would point to L'Antica Pizzeria da Michele or Gino Sorbillo, both famous for classic Neapolitan margherita.",
+   "no_rag_note": "Answers confidently from memory. A RAG system scoped to space exploration should decline instead.",
+   "claims": []
+  }
+ ],
+ "failure_cases": [
+  {
+   "id": "tiny-chunks",
+   "question": "apollo-13",
+   "params": {
+    "chunk_size": 48,
+    "overlap": 0,
+    "top_k": 3
+   },
+   "title": "Chunks too small",
+   "lesson": "With 48-token chunks every sentence is retrieved on its own. The top 3 fragments merely sound similar (one is about Apollo 11!) and the passages holding the evidence never reach the prompt. Lose the context around a fact and retrieval stops finding it."
+  },
+  {
+   "id": "ambiguous",
+   "question": "mercury-ambiguous",
+   "params": {},
+   "title": "Ambiguous question",
+   "lesson": "\"Mercury\" is both a planet and a NASA programme. Watch the retrieval lines reach into two different regions of the map: the context mixes topics."
+  },
+  {
+   "id": "out-of-corpus",
+   "question": "pizza",
+   "params": {},
+   "title": "Out of corpus",
+   "lesson": "Nothing in the corpus is about pizza. Every similarity is below the threshold, so the system declines. Set the threshold to 0: retrieval ALWAYS returns something, however irrelevant."
+  },
+  {
+   "id": "rerank-titan",
+   "question": "titan-gemini",
+   "params": {
+    "rerank": true
+   },
+   "title": "Reranking to the rescue",
+   "lesson": "Vector search confuses Titan the moon with Titan the rocket. The cross-encoder reads question and passage together and pushes the rocket passages to the top. Toggle reranking off to compare."
+  }
+ ]
+}

@@ -1,0 +1,51 @@
+Galileo was an American robotic space probe that studied the planet Jupiter and its moons, as well as the asteroids Gaspra and Ida. Named after the Italian astronomer Galileo Galilei, it consisted of an orbiter and an entry probe. It was delivered into Earth orbit on October 18, 1989, by Space Shuttle Atlantis, during STS-34. Galileo arrived at Jupiter on December 7, 1995, after gravitational assist flybys of Venus and Earth, and became the first spacecraft to orbit an outer planet.
+
+The Jet Propulsion Laboratory built the Galileo spacecraft and managed the Galileo program for NASA. West Germany's Messerschmitt-Bölkow-Blohm supplied the propulsion module. NASA's Ames Research Center managed the atmospheric probe, which was built by Hughes Aircraft Company. At launch, the orbiter and probe together had a mass of 2,562 kg (5,648 lb) and stood 6.15 m (20.2 ft) tall.
+
+Spacecraft are normally stabilized either by spinning around a fixed axis or by maintaining a fixed orientation with reference to the Sun and a star. Galileo did both. One section of the spacecraft rotated at three revolutions per minute, keeping Galileo stable and holding six instruments that gathered data from many different directions, including the fields and particles instruments.
+
+Galileo was intentionally destroyed in Jupiter's atmosphere on September 21, 2003 to prevent it from contaminating any of Jupiter's moons. The next orbiter to be sent to Jupiter was Juno, which arrived on July 5, 2016.
+
+Jupiter is the largest planet in the Solar System, with more than twice the mass of all the other planets combined. Consideration of sending a probe to Jupiter began as early as 1959. NASA's Scientific Advisory Group (SAG) for Outer Solar System Missions considered the requirements for Jupiter orbiters and atmospheric probes. It noted that the technology to build a heat shield for an atmospheric probe did not yet exist, and facilities to test one under the conditions found on Jupiter would not be available until 1980. NASA management designated the Jet Propulsion Laboratory (JPL) as the lead center for the Jupiter Orbiter Probe (JOP) project. The JOP would be the fifth spacecraft to visit Jupiter, but the first to orbit it, and the probe would be the first to enter its atmosphere.
+
+An important decision made at this time was to use a Mariner program spacecraft like that used for Voyager for the Jupiter orbiter, rather than a Pioneer. Pioneer was stabilized by spinning the spacecraft at 60 rpm, which gave a 360-degree view of the surroundings, and did not require an attitude control system. In contrast, Mariner had an attitude control system with three gyroscopes and two sets of six nitrogen jet thrusters. Attitude was determined with reference to the Sun and Canopus, which were monitored with two primary and four secondary sensors. There was also an inertial reference unit and an accelerometer. This allowed it to take high-resolution images, but the functionality came at a cost of increased weight. A Mariner weighed 722 kilograms (1,592 lb) compared to just 146 kilograms (322 lb) for a Pioneer.
+
+John R. Casani, who had headed the Mariner and Voyager projects, became the first project manager. He solicited suggestions for a more inspirational name for the project, and the most votes went to "Galileo" after Galileo Galilei, the first person to view Jupiter through a telescope. His 1610 discovery of what is now known as the Galilean moons orbiting Jupiter was important evidence of the Copernican model of the solar system. It was also noted that the name was that of a spacecraft in the Star Trek television show. The new name was officially adopted in February 1978.
+
+The Jet Propulsion Laboratory built the Galileo spacecraft with an octagonal prism bus and managed the Galileo mission for NASA. West Germany's Messerschmitt-Bölkow-Blohm supplied the propulsion module. NASA's Ames Research Center managed the cone-shaped atmospheric probe, which was built by the Hughes Aircraft Company. At launch, the orbiter and probe together had a mass of 2,562 kg (5,648 lb) and stood 6.15 m (20.2 ft) tall.
+
+Spacecraft are normally stabilized either by spinning around a fixed axis or by maintaining a fixed orientation with reference the Sun and a star; Galileo did both. One section of the spacecraft rotated at 3 revolutions per minute, keeping Galileo stable and holding six instruments that gathered data from many different directions, including the fields and particles instruments. Back on the ground, the mission operations team used software containing 650,000 lines of code in the orbit sequence design process; 1,615,000 lines in the telemetry interpretation; and 550,000 lines of code in navigation. All of the spacecraft components and spare parts received a minimum of 2,000 hours of testing. The spacecraft was designed to last for at least five years—long enough to reach Jupiter and perform its mission.
+
+On December 19, 1985, it departed the JPL in Pasadena, California, on the first leg of its journey, a road trip to the Kennedy Space Center in Florida. Due to the Space Shuttle Challenger disaster, the May launch date could not be met, and the mission was rescheduled to October 12, 1989. The Galileo spacecraft would be launched by the STS-34 mission in the Space Shuttle Atlantis. As the launch date of Galileo neared, anti-nuclear groups, concerned over what they perceived as an unacceptable risk to the public's safety from the plutonium in the Galileo's radioisotope thermoelectric generators (RTGs) and General Purpose Heat Source (GPHS) modules, sought a court injunction prohibiting Galileo's launch. RTGs were necessary for deep space probes because they had to fly distances from the Sun that made the use of solar energy impractical.
+
+The launch was delayed twice more: by a faulty main engine controller that forced a postponement to October 17, and then by inclement weather, which necessitated a postponement to the following day, but this was not a concern since the launch window extended until November 21. Atlantis finally lifted off at 16:53:40 UTC on October 18, and went into a 343-kilometer (213 mi) orbit. Galileo was successfully deployed at 00:15 UTC on October 19. Following the IUS burn, the Galileo spacecraft adopted its configuration for solo flight, and separated from the IUS at 01:06:53 UTC on October 19. The launch was perfect, and Galileo was soon headed towards Venus at over 14,000 km/h (9,000 mph). Atlantis returned to Earth safely on October 23.
+
+The CDH subsystem was actively redundant, with two parallel data system buses running at all times. Each data system bus (a.k.a. string) was composed of the same functional elements, consisting of multiplexers (MUX), high-level modules (HLM), low-level modules (LLM), power converters (PC), bulk memory (BUM), data management subsystem bulk memory (DBUM), timing chains (TC), phase locked loops (PLL), Golay coders (GC), hardware command decoders (HCD) and critical controllers (CRC).
+
+The CDH subsystem was responsible for maintaining the following functions:
+
+collection, processing, and formatting of telemetry data for downlink transmission
+
+movement of data between subsystems via a data system bus.
+
+The spacecraft was controlled by six RCA 1802 COSMAC microprocessor CPUs: four on the spun side and two on the despun side. Each CPU was clocked at about 1.6 MHz, and fabricated on sapphire (silicon on sapphire), which is a radiation-and static-hardened material ideal for spacecraft operation. This 8-bit microprocessor was the first low-power CMOS processor chip, similar to the 6502 that was being built into the Apple II desktop computer at that time.
+
+The Galileo Attitude and Articulation Control System (AACSE) was controlled by two Itek Advanced Technology Airborne Computers (ATAC), built using radiation-hardened 2901s. The AACSE could be reprogrammed in flight by sending the new program through the Command and Data Subsystem. The attitude control system software was written in the HAL/S programming language, which was also used in the Space Shuttle program.
+
+Memory capacity provided by each BUM was 16K of RAM, while the DBUMs each provided 8K of RAM. There were two BUMs and two DBUMs in the CDH subsystem and they all resided on the spun side of the spacecraft. The BUMs and DBUMs provided storage for sequences and contain various buffers for telemetry data and interbus communication. Every HLM and LLM was built up around a single 1802 microprocessor and 32K of RAM (for HLMs) or 16K of RAM (for LLMs). Two HLMs and two LLMs resided on the spun side while two LLMs were on the despun side. Thus, total memory capacity available to the CDH subsystem was 176K of RAM: 144K allocated to the spun side and 32K to the despun side.
+
+Each HLM was responsible for the following functions:
+
+movement of data over the data system bus
+
+execution of stored sequences (time-event tables)
+
+error recovery including system fault-protection monitoring and response.
+
+Each LLM was responsible for the following functions:
+
+collect and format engineering data from the subsystems
+
+provide the capability to issue coded and discrete commands to spacecraft users
+
+recognize out-of-tolerance conditions on status inputs

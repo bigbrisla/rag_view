@@ -1,0 +1,51 @@
+{
+  "name": "ragview-web",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview",
+    "gen:types": "cp ../shared/schema/trace.schema.json src/types/trace.schema.json && json2ts -i ../shared/schema/trace.schema.json -o src/types/trace.ts --bannerComment \"/* Generated from shared/schema/trace.schema.json by json-schema-to-typescript. Do not edit: run npm run gen:types. */\" --unreachableDefinitions && prettier --write src/types/trace.ts",
+    "typecheck": "vue-tsc -b",
+    "lint": "eslint .",
+    "format": "prettier --write src tests",
+    "test": "vitest run",
+    "test:e2e": "playwright test"
+  },
+  "dependencies": {
+    "@fontsource-variable/inter": "^5.3.0",
+    "@fontsource-variable/jetbrains-mono": "^5.3.0",
+    "@fontsource/instrument-serif": "^5.3.0",
+    "@huggingface/transformers": "^4.3.1",
+    "d3-quadtree": "^3.0.1",
+    "d3-selection": "^3.0.0",
+    "d3-zoom": "^3.0.0",
+    "gsap": "^3.15.0",
+    "pinia": "^4.0.3",
+    "vue": "^3.5.43",
+    "vue-i18n": "^11.4.13"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1.64.0",
+    "@types/d3-quadtree": "^3.0.6",
+    "@types/d3-selection": "^3.0.12",
+    "@types/d3-zoom": "^3.0.9",
+    "@types/node": "^22.20.5",
+    "@vitejs/plugin-vue": "^6.0.9",
+    "@vue/eslint-config-typescript": "^14.9.0",
+    "ajv": "^8.20.0",
+    "eslint": "^10.12.0",
+    "eslint-plugin-vue": "^10.11.1",
+    "jsdom": "^29.1.1",
+    "json-schema-to-typescript": "^16.0.0",
+    "prettier": "^3.9.9",
+    "typescript": "~6.0",
+    "typescript-eslint": "^8.71.1",
+    "vite": "^8.3.4",
+    "vitest": "^5.0.3",
+    "vue-tsc": "^3.3.12"
+  }
+}

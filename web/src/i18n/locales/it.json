@@ -1,0 +1,10 @@
+{
+  "app": {
+    "tagline": "La retrieval-augmented generation, passo dopo passo",
+    "language": "Lingua"
+  },
+  "player": {
+    "play": "Riproduci",
+    "pause": "Pausa"
+  }
+}

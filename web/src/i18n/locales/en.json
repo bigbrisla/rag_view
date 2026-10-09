@@ -1,0 +1,214 @@
+{
+  "app": {
+    "name": "RAGView",
+    "tagline": "Retrieval-augmented generation, step by step",
+    "headline": "Ask a question. {watch} a RAG system answer it.",
+    "watch": "Watch",
+    "lede": "Every number, line and highlight below comes from a real pipeline run on {docs} Wikipedia articles about space exploration: real chunking, real embeddings, real vector search. Only the final answer is simulated.",
+    "github": "Source on GitHub",
+    "theme": "Toggle light / dark theme",
+    "underTheHood": "Under the hood",
+    "language": "Language"
+  },
+  "ask": {
+    "placeholder": "Ask anything about space exploration…",
+    "button": "Ask",
+    "try": "Try",
+    "tooLong": "Keep it under {n} characters.",
+    "replayBadge": "Recorded run",
+    "liveBadge": "Computed in your browser",
+    "replayHint": "This run was recorded at build time and replays instantly. Ask your own question to run the pipeline live in your browser.",
+    "liveHint": "Embedding, search and reranking just ran on this device. Nothing was sent to a server."
+  },
+  "models": {
+    "embed": "Embedding model",
+    "rerank": "Reranker",
+    "downloading": "Downloading {name}: {done} of {total}",
+    "once": "One-time download, cached by your browser.",
+    "ready": "ready",
+    "error": "Could not load the model: {error}"
+  },
+  "status": {
+    "loading": "Loading the corpus…",
+    "running": "Running the pipeline…",
+    "building": "Embedding {done} of {total} chunks in your browser · about {eta} s left",
+    "error": "Something went wrong: {error}"
+  },
+  "params": {
+    "title": "Pipeline settings",
+    "chunkSize": "Chunk size",
+    "overlap": "Overlap",
+    "strategy": "Splitting",
+    "sentence": "Sentence-aware",
+    "fixed": "Fixed-size",
+    "topK": "Top-k",
+    "threshold": "Similarity threshold",
+    "rerank": "Cross-encoder reranking",
+    "tokens": "{n} tokens",
+    "preset": "precomputed",
+    "custom": "computed in your browser",
+    "customNotice": "No precomputed index for these settings: the whole corpus ({n} chunks) will be chunked and embedded on this device. Expect up to a minute on a laptop; it is cached afterwards.",
+    "build": "Build this index",
+    "reset": "Reset",
+    "rerankDownload": "Downloads a {size} model on first use."
+  },
+  "player": {
+    "play": "Play",
+    "pause": "Pause",
+    "back": "Previous step",
+    "forward": "Next step",
+    "restart": "Restart",
+    "speed": "Speed",
+    "phase": "Step {n} of {total}",
+    "shortcuts": "Space: play/pause · ←/→: steps"
+  },
+  "phases": {
+    "chunking": {
+      "title": "Chunking",
+      "kicker": "Documents are split into pieces",
+      "body": "A retriever can't hand a whole article to the model, so every document is cut into chunks of at most {size} tokens. Neighbouring chunks share up to {overlap} tokens of overlap so a fact sitting on a boundary still lives whole in one of them.",
+      "notice": "Drag the sliders: the chunks below are recomputed instantly with the same tokenizer the model uses."
+    },
+    "embedding": {
+      "title": "Embedding",
+      "kicker": "Each chunk becomes a vector",
+      "body": "An embedding model ({model}) reads each chunk and outputs {dim} numbers. Texts with similar meaning get similar vectors, even when they share no words.",
+      "notice": "Points appear on the map as their vectors are computed. Position on the map comes only from the vectors; colour is just the article's topic."
+    },
+    "indexing": {
+      "title": "Indexing",
+      "kicker": "Vectors settle into a searchable space",
+      "body": "The {n} vectors are stored in an index. With a corpus this small, comparing the question against every vector (exact search) takes well under a millisecond, so no approximate index is needed.",
+      "notice": "The map is a 2D projection (UMAP) of the {dim}-dimensional space. Clusters you see were not given to the model: they emerged from the text."
+    },
+    "query": {
+      "title": "Query",
+      "kicker": "The question is embedded the same way",
+      "body": "Your question goes through the same tokenizer and the same model, so it lands in the same space as the chunks.",
+      "notice": "It is placed on the map from its 15 nearest chunks, the way UMAP places new points."
+    },
+    "retrieval": {
+      "title": "Retrieval",
+      "kicker": "Nearest neighbours by cosine similarity",
+      "body": "The question vector is compared with all {n} chunk vectors. The top {k} with similarity of at least {threshold} move on.",
+      "notice": "Scores are computed in {dim} dimensions; distances on the 2D map are only approximate. This model rarely scores below 0.35, which is why the threshold sits high."
+    },
+    "rerank": {
+      "title": "Reranking",
+      "kicker": "A second, slower opinion",
+      "body": "A cross-encoder reads the question and each candidate together and scores how well the passage answers it. It is far more precise than vector similarity, but too slow to run over the whole corpus, so it only reorders the shortlist.",
+      "off": "Reranking is off: the {k} best matches from vector search go straight into the prompt.",
+      "enable": "Turn on reranking"
+    },
+    "prompt": {
+      "title": "Prompt",
+      "kicker": "Retrieved chunks are pasted into the prompt",
+      "body": "The model never searches anything itself: it only sees this text. The instructions ask it to answer from the numbered sources and to cite them.",
+      "notice": "Token counts use the embedding model's tokenizer, a close approximation of an LLM's."
+    },
+    "generation": {
+      "title": "Generation",
+      "kicker": "The answer is written from the sources",
+      "body": "The answer streams token by token. Each [n] cites a source from the prompt: hover it to see the passage on the map and the exact evidence.",
+      "notice": "Simulated: no LLM runs in this demo. Curated questions use a hand-written answer whose sentences are only stated if their evidence actually reached the prompt; other questions quote the most relevant retrieved sentences."
+    }
+  },
+  "chunking": {
+    "inDoc": "{n} chunks in this article",
+    "corpus": "{n} chunks across {docs} articles · avg {avg} tokens",
+    "apply": "Run the pipeline with these settings",
+    "differs": "Preview only: the pipeline above ran with {size} / {overlap}.",
+    "legend": "Chunks alternate colours; striped text is overlap shared by two chunks."
+  },
+  "embedding": {
+    "precomputed": "Precomputed at build time with the same model",
+    "live": "Computed in your browser",
+    "vector": "First {n} of {dim} dimensions",
+    "count": "{done} of {total} chunks embedded"
+  },
+  "indexing": {
+    "vectors": "Vectors",
+    "dims": "Dimensions",
+    "size": "Index size",
+    "search": "Search",
+    "exact": "Exact, brute force",
+    "projection": "UMAP fitted on {preset}, {neighbors} neighbours, min dist {dist}"
+  },
+  "query": {
+    "tokens": "{n} WordPiece tokens",
+    "time": "Embedded in {ms} ms"
+  },
+  "retrieval": {
+    "scanned": "{n} similarities computed in {ms} ms",
+    "selected": "selected",
+    "below": "below threshold",
+    "beyond": "beyond top-{k}",
+    "none": "No chunk reached the threshold. The pipeline has nothing to ground an answer on."
+  },
+  "rerank": {
+    "before": "Vector search",
+    "after": "Cross-encoder",
+    "relevance": "relevance",
+    "moved": "{n} position | {n} positions"
+  },
+  "prompt": {
+    "system": "Instructions",
+    "context": "Sources",
+    "question": "Question",
+    "total": "{n} tokens in total",
+    "show": "Show the full prompt",
+    "hide": "Hide the full prompt"
+  },
+  "generation": {
+    "simulated": "Simulated generation",
+    "answered": "Grounded answer",
+    "partial": "Partial answer",
+    "refused": "Declined to answer",
+    "missing": "Not covered by the retrieved sources: {topics}",
+    "evidence": "Evidence from source [{n}] · {title}",
+    "withRag": "With RAG",
+    "withoutRag": "Without RAG",
+    "illustrative": "Illustrative, hand-written: the kind of answer an LLM gives from memory alone.",
+    "noRagUnavailable": "Comparisons without RAG exist only for the curated questions: this demo never invents an LLM answer.",
+    "sources": "Cites {n} source | Cites {n} sources",
+    "noSources": "No sources"
+  },
+  "map": {
+    "empty": "The vector space is empty until chunks are embedded.",
+    "reset": "Reset view",
+    "query": "Your question",
+    "legend": "Topic of the source article",
+    "chunk": "Chunk {i} · {tokens} tokens"
+  },
+  "failure": {
+    "title": "When retrieval fails",
+    "lede": "RAG is only as good as what it retrieves. These guided cases break the pipeline on purpose, and the trace shows exactly where.",
+    "run": "Run this case"
+  },
+  "eval": {
+    "title": "How good is the retrieval?",
+    "lede": "{n} hand-written questions, each with the article that answers it. A hit means a chunk from that article was retrieved.",
+    "chunking": "Chunking",
+    "rerank": "Rerank",
+    "chunks": "Chunks",
+    "yes": "yes",
+    "no": "no",
+    "note": "Measured offline with the same models (uv run ragview eval). Document-level hits favour large chunks; they say nothing about whether the exact evidence fits in the prompt."
+  },
+  "hood": {
+    "title": "Under the hood",
+    "phase": "This step",
+    "trace": "Full trace",
+    "download": "Download trace",
+    "import": "Load a trace",
+    "invalid": "Not a valid RAGView trace: {error}",
+    "schema": "Schema v{v} · {engine} engine · {source}",
+    "expand": "{n} more"
+  },
+  "about": {
+    "title": "How this works",
+    "body": "Chunking, embedding (bge-small-en-v1.5), vector search, reranking (ms-marco-MiniLM-L-6-v2) and projection run in your browser through transformers.js, using the exact ONNX files that the Python build pipeline uses. Both engines emit the same typed trace, and tests check they agree. Text from Wikipedia, CC BY-SA 4.0.",
+    "credits": "Corpus attribution",
+    "code": "Code under MIT licence"
+  }
+}

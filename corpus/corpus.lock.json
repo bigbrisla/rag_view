@@ -1,0 +1,381 @@
+{
+  "fetched_at": "2026-10-08",
+  "documents": [
+    {
+      "id": "mercury-planet",
+      "title": "Mercury (planet)",
+      "url": "https://en.wikipedia.org/wiki/Mercury_(planet)",
+      "revid": 1379153666,
+      "category": "bodies",
+      "words": 1487
+    },
+    {
+      "id": "venus",
+      "title": "Venus",
+      "url": "https://en.wikipedia.org/wiki/Venus",
+      "revid": 1379153068,
+      "category": "bodies",
+      "words": 1397
+    },
+    {
+      "id": "moon",
+      "title": "Moon",
+      "url": "https://en.wikipedia.org/wiki/Moon",
+      "revid": 1378452949,
+      "category": "bodies",
+      "words": 1446
+    },
+    {
+      "id": "mars",
+      "title": "Mars",
+      "url": "https://en.wikipedia.org/wiki/Mars",
+      "revid": 1375821898,
+      "category": "bodies",
+      "words": 1312
+    },
+    {
+      "id": "jupiter",
+      "title": "Jupiter",
+      "url": "https://en.wikipedia.org/wiki/Jupiter",
+      "revid": 1378923247,
+      "category": "bodies",
+      "words": 1403
+    },
+    {
+      "id": "saturn",
+      "title": "Saturn",
+      "url": "https://en.wikipedia.org/wiki/Saturn",
+      "revid": 1375061756,
+      "category": "bodies",
+      "words": 1423
+    },
+    {
+      "id": "europa-moon",
+      "title": "Europa (moon)",
+      "url": "https://en.wikipedia.org/wiki/Europa_(moon)",
+      "revid": 1378936382,
+      "category": "bodies",
+      "words": 1429
+    },
+    {
+      "id": "titan-moon",
+      "title": "Titan (moon)",
+      "url": "https://en.wikipedia.org/wiki/Titan_(moon)",
+      "revid": 1378589388,
+      "category": "bodies",
+      "words": 1487
+    },
+    {
+      "id": "enceladus",
+      "title": "Enceladus",
+      "url": "https://en.wikipedia.org/wiki/Enceladus",
+      "revid": 1378166845,
+      "category": "bodies",
+      "words": 1427
+    },
+    {
+      "id": "pluto",
+      "title": "Pluto",
+      "url": "https://en.wikipedia.org/wiki/Pluto",
+      "revid": 1378876148,
+      "category": "bodies",
+      "words": 1399
+    },
+    {
+      "id": "sputnik-1",
+      "title": "Sputnik 1",
+      "url": "https://en.wikipedia.org/wiki/Sputnik_1",
+      "revid": 1378867201,
+      "category": "robotic",
+      "words": 1465
+    },
+    {
+      "id": "voyager-1",
+      "title": "Voyager 1",
+      "url": "https://en.wikipedia.org/wiki/Voyager_1",
+      "revid": 1378388644,
+      "category": "robotic",
+      "words": 1476
+    },
+    {
+      "id": "voyager-2",
+      "title": "Voyager 2",
+      "url": "https://en.wikipedia.org/wiki/Voyager_2",
+      "revid": 1378388601,
+      "category": "robotic",
+      "words": 1431
+    },
+    {
+      "id": "galileo-spacecraft",
+      "title": "Galileo (spacecraft)",
+      "url": "https://en.wikipedia.org/wiki/Galileo_(spacecraft)",
+      "revid": 1355158060,
+      "category": "robotic",
+      "words": 1478
+    },
+    {
+      "id": "cassini-huygens",
+      "title": "Cassini\u2013Huygens",
+      "url": "https://en.wikipedia.org/wiki/Cassini%E2%80%93Huygens",
+      "revid": 1368808017,
+      "category": "robotic",
+      "words": 1451
+    },
+    {
+      "id": "mars-pathfinder",
+      "title": "Mars Pathfinder",
+      "url": "https://en.wikipedia.org/wiki/Mars_Pathfinder",
+      "revid": 1367571800,
+      "category": "robotic",
+      "words": 1456
+    },
+    {
+      "id": "curiosity-rover",
+      "title": "Curiosity (rover)",
+      "url": "https://en.wikipedia.org/wiki/Curiosity_(rover)",
+      "revid": 1379195791,
+      "category": "robotic",
+      "words": 1435
+    },
+    {
+      "id": "perseverance-rover",
+      "title": "Perseverance (rover)",
+      "url": "https://en.wikipedia.org/wiki/Perseverance_(rover)",
+      "revid": 1377293305,
+      "category": "robotic",
+      "words": 1428
+    },
+    {
+      "id": "new-horizons",
+      "title": "New Horizons",
+      "url": "https://en.wikipedia.org/wiki/New_Horizons",
+      "revid": 1379168092,
+      "category": "robotic",
+      "words": 1476
+    },
+    {
+      "id": "juno-spacecraft",
+      "title": "Juno (spacecraft)",
+      "url": "https://en.wikipedia.org/wiki/Juno_(spacecraft)",
+      "revid": 1379122444,
+      "category": "robotic",
+      "words": 1493
+    },
+    {
+      "id": "rosetta-spacecraft",
+      "title": "Rosetta (spacecraft)",
+      "url": "https://en.wikipedia.org/wiki/Rosetta_(spacecraft)",
+      "revid": 1378634170,
+      "category": "robotic",
+      "words": 1454
+    },
+    {
+      "id": "hubble-space-telescope",
+      "title": "Hubble Space Telescope",
+      "url": "https://en.wikipedia.org/wiki/Hubble_Space_Telescope",
+      "revid": 1378228161,
+      "category": "robotic",
+      "words": 1487
+    },
+    {
+      "id": "james-webb-space-telescope",
+      "title": "James Webb Space Telescope",
+      "url": "https://en.wikipedia.org/wiki/James_Webb_Space_Telescope",
+      "revid": 1377003479,
+      "category": "robotic",
+      "words": 1481
+    },
+    {
+      "id": "vostok-1",
+      "title": "Vostok 1",
+      "url": "https://en.wikipedia.org/wiki/Vostok_1",
+      "revid": 1373619528,
+      "category": "crewed",
+      "words": 1461
+    },
+    {
+      "id": "project-mercury",
+      "title": "Project Mercury",
+      "url": "https://en.wikipedia.org/wiki/Project_Mercury",
+      "revid": 1363127065,
+      "category": "crewed",
+      "words": 1466
+    },
+    {
+      "id": "project-gemini",
+      "title": "Project Gemini",
+      "url": "https://en.wikipedia.org/wiki/Project_Gemini",
+      "revid": 1378545943,
+      "category": "crewed",
+      "words": 1458
+    },
+    {
+      "id": "apollo-program",
+      "title": "Apollo program",
+      "url": "https://en.wikipedia.org/wiki/Apollo_program",
+      "revid": 1378112034,
+      "category": "crewed",
+      "words": 1464
+    },
+    {
+      "id": "apollo-11",
+      "title": "Apollo 11",
+      "url": "https://en.wikipedia.org/wiki/Apollo_11",
+      "revid": 1371120273,
+      "category": "crewed",
+      "words": 1440
+    },
+    {
+      "id": "apollo-13",
+      "title": "Apollo 13",
+      "url": "https://en.wikipedia.org/wiki/Apollo_13",
+      "revid": 1377503359,
+      "category": "crewed",
+      "words": 1471
+    },
+    {
+      "id": "skylab",
+      "title": "Skylab",
+      "url": "https://en.wikipedia.org/wiki/Skylab",
+      "revid": 1377166744,
+      "category": "crewed",
+      "words": 1493
+    },
+    {
+      "id": "mir",
+      "title": "Mir",
+      "url": "https://en.wikipedia.org/wiki/Mir",
+      "revid": 1377288634,
+      "category": "crewed",
+      "words": 1412
+    },
+    {
+      "id": "space-shuttle-challenger-disaster",
+      "title": "Space Shuttle Challenger disaster",
+      "url": "https://en.wikipedia.org/wiki/Space_Shuttle_Challenger_disaster",
+      "revid": 1375891267,
+      "category": "crewed",
+      "words": 1335
+    },
+    {
+      "id": "international-space-station",
+      "title": "International Space Station",
+      "url": "https://en.wikipedia.org/wiki/International_Space_Station",
+      "revid": 1379042073,
+      "category": "crewed",
+      "words": 1440
+    },
+    {
+      "id": "artemis-program",
+      "title": "Artemis program",
+      "url": "https://en.wikipedia.org/wiki/Artemis_program",
+      "revid": 1378556685,
+      "category": "crewed",
+      "words": 1424
+    },
+    {
+      "id": "r-7-semyorka",
+      "title": "R-7 Semyorka",
+      "url": "https://en.wikipedia.org/wiki/R-7_Semyorka",
+      "revid": 1351884837,
+      "category": "rockets",
+      "words": 1376
+    },
+    {
+      "id": "saturn-v",
+      "title": "Saturn V",
+      "url": "https://en.wikipedia.org/wiki/Saturn_V",
+      "revid": 1368745721,
+      "category": "rockets",
+      "words": 1447
+    },
+    {
+      "id": "titan-rocket-family",
+      "title": "Titan (rocket family)",
+      "url": "https://en.wikipedia.org/wiki/Titan_(rocket_family)",
+      "revid": 1371096825,
+      "category": "rockets",
+      "words": 1472
+    },
+    {
+      "id": "soyuz-rocket-family",
+      "title": "Soyuz (rocket family)",
+      "url": "https://en.wikipedia.org/wiki/Soyuz_(rocket_family)",
+      "revid": 1369555491,
+      "category": "rockets",
+      "words": 1442
+    },
+    {
+      "id": "falcon-9",
+      "title": "Falcon 9",
+      "url": "https://en.wikipedia.org/wiki/Falcon_9",
+      "revid": 1368593710,
+      "category": "rockets",
+      "words": 1500
+    },
+    {
+      "id": "space-launch-system",
+      "title": "Space Launch System",
+      "url": "https://en.wikipedia.org/wiki/Space_Launch_System",
+      "revid": 1366754581,
+      "category": "rockets",
+      "words": 1445
+    },
+    {
+      "id": "yuri-gagarin",
+      "title": "Yuri Gagarin",
+      "url": "https://en.wikipedia.org/wiki/Yuri_Gagarin",
+      "revid": 1378508084,
+      "category": "people",
+      "words": 1448
+    },
+    {
+      "id": "valentina-tereshkova",
+      "title": "Valentina Tereshkova",
+      "url": "https://en.wikipedia.org/wiki/Valentina_Tereshkova",
+      "revid": 1378807878,
+      "category": "people",
+      "words": 1441
+    },
+    {
+      "id": "sergei-korolev",
+      "title": "Sergei Korolev",
+      "url": "https://en.wikipedia.org/wiki/Sergei_Korolev",
+      "revid": 1373244633,
+      "category": "people",
+      "words": 1478
+    },
+    {
+      "id": "wernher-von-braun",
+      "title": "Wernher von Braun",
+      "url": "https://en.wikipedia.org/wiki/Wernher_von_Braun",
+      "revid": 1378871309,
+      "category": "people",
+      "words": 1458
+    },
+    {
+      "id": "neil-armstrong",
+      "title": "Neil Armstrong",
+      "url": "https://en.wikipedia.org/wiki/Neil_Armstrong",
+      "revid": 1378503384,
+      "category": "people",
+      "words": 1490
+    },
+    {
+      "id": "katherine-johnson",
+      "title": "Katherine Johnson",
+      "url": "https://en.wikipedia.org/wiki/Katherine_Johnson",
+      "revid": 1371479101,
+      "category": "people",
+      "words": 1465
+    },
+    {
+      "id": "margaret-hamilton-software-engineer",
+      "title": "Margaret Hamilton (software engineer)",
+      "url": "https://en.wikipedia.org/wiki/Margaret_Hamilton_(software_engineer)",
+      "revid": 1379224884,
+      "category": "people",
+      "words": 1480
+    }
+  ]
+}

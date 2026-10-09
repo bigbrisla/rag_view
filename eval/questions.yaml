@@ -1,0 +1,51 @@
+# Retrieval evaluation set: natural questions with the document that answers them.
+# Metrics are document-level: a hit means a chunk from the gold document is retrieved.
+# Phrasings deliberately avoid copying article wording.
+questions:
+  - {q: "Which probe made the first successful flyby of the innermost planet?", doc: mercury-planet}
+  - {q: "Why is the surface of Venus so hot?", doc: venus}
+  - {q: "How did Earth's natural satellite form?", doc: moon}
+  - {q: "What gives the red planet its colour?", doc: mars}
+  - {q: "How big is the Great Red Spot?", doc: jupiter}
+  - {q: "What are Saturn's rings made of?", doc: saturn}
+  - {q: "Is there an ocean under the ice of Jupiter's moon Europa?", doc: europa-moon}
+  - {q: "Which moon has lakes of liquid methane?", doc: titan-moon}
+  - {q: "Which icy moon sprays water plumes from its south pole?", doc: enceladus}
+  - {q: "Why was Pluto reclassified as a dwarf planet?", doc: pluto}
+  - {q: "What was the first artificial satellite and when was it launched?", doc: sputnik-1}
+  - {q: "Which spacecraft is the most distant human-made object?", doc: voyager-1}
+  - {q: "Which probe is the only one to have visited Uranus and Neptune?", doc: voyager-2}
+  - {q: "Which spacecraft dropped a probe into Jupiter's atmosphere in 1995?", doc: galileo-spacecraft}
+  - {q: "How did the mission to Saturn end in 2017?", doc: cassini-huygens}
+  - {q: "Which 1997 mission landed a small rover called Sojourner?", doc: mars-pathfinder}
+  - {q: "What did the rover in Gale crater discover about ancient habitability?", doc: curiosity-rover}
+  - {q: "Which rover carried the Ingenuity helicopter?", doc: perseverance-rover}
+  - {q: "When did a spacecraft first fly past Pluto?", doc: new-horizons}
+  - {q: "Which probe orbits Jupiter in a polar orbit to study its interior?", doc: juno-spacecraft}
+  - {q: "Which mission landed on a comet with the Philae lander?", doc: rosetta-spacecraft}
+  - {q: "What was wrong with the main mirror of the telescope launched in 1990?", doc: hubble-space-telescope}
+  - {q: "Which infrared observatory orbits the Sun-Earth L2 point?", doc: james-webb-space-telescope}
+  - {q: "On which flight did a human first orbit the Earth?", doc: vostok-1}
+  - {q: "What was the first US human spaceflight program?", doc: project-mercury}
+  - {q: "Which program tested orbital rendezvous before the Moon landings?", doc: project-gemini}
+  - {q: "Who proposed the goal of landing a man on the Moon before the decade was out?", doc: apollo-program}
+  - {q: "Who was the second person to walk on the Moon in July 1969?", doc: apollo-11}
+  - {q: "Which mission's crew used the lunar module as a lifeboat?", doc: apollo-13}
+  - {q: "What was the first American space station?", doc: skylab}
+  - {q: "Which modular Soviet station was assembled in orbit from 1986?", doc: mir}
+  - {q: "What caused the Space Shuttle to break apart 73 seconds after launch in 1986?", doc: space-shuttle-challenger-disaster}
+  - {q: "Which countries' agencies operate the largest modular space station?", doc: international-space-station}
+  - {q: "What is NASA's plan to return astronauts to the Moon?", doc: artemis-program}
+  - {q: "What was the world's first intercontinental ballistic missile?", doc: r-7-semyorka}
+  - {q: "What was the most powerful rocket used in the Apollo program?", doc: saturn-v}
+  - {q: "Which family of missiles also launched Gemini and Voyager?", doc: titan-rocket-family}
+  - {q: "Which Russian rocket family has flown the most launches in history?", doc: soyuz-rocket-family}
+  - {q: "Which rocket's first stage lands vertically to be reused?", doc: falcon-9}
+  - {q: "Which super heavy-lift rocket launched Artemis I?", doc: space-launch-system}
+  - {q: "Who was the first human in space?", doc: yuri-gagarin}
+  - {q: "Who was the first woman to fly in space?", doc: valentina-tereshkova}
+  - {q: "Who was the chief designer of the Soviet space program?", doc: sergei-korolev}
+  - {q: "Which German engineer developed the V-2 and later worked for NASA?", doc: wernher-von-braun}
+  - {q: "Who was the first person to walk on the Moon?", doc: neil-armstrong}
+  - {q: "Which mathematician calculated trajectories for John Glenn's orbital flight?", doc: katherine-johnson}
+  - {q: "Who led the development of the Apollo flight software?", doc: margaret-hamilton-software-engineer}

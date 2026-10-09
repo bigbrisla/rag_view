@@ -1,0 +1,917 @@
+{
+  "$defs": {
+    "AnswerToken": {
+      "additionalProperties": false,
+      "properties": {
+        "text": {
+          "type": "string"
+        },
+        "cite": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Citation marker: source number"
+        }
+      },
+      "required": [
+        "text",
+        "cite"
+      ],
+      "title": "AnswerToken",
+      "type": "object"
+    },
+    "Candidate": {
+      "additionalProperties": false,
+      "properties": {
+        "chunk": {
+          "type": "integer"
+        },
+        "doc": {
+          "type": "string"
+        },
+        "score": {
+          "description": "Cosine similarity to the query",
+          "type": "number"
+        },
+        "rank": {
+          "type": "integer"
+        },
+        "above_threshold": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "chunk",
+        "doc",
+        "score",
+        "rank",
+        "above_threshold"
+      ],
+      "title": "Candidate",
+      "type": "object"
+    },
+    "ChunkSpan": {
+      "additionalProperties": false,
+      "properties": {
+        "start": {
+          "description": "Character offset in the document text (inclusive)",
+          "type": "integer"
+        },
+        "end": {
+          "description": "Character offset in the document text (exclusive)",
+          "type": "integer"
+        },
+        "tokens": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "start",
+        "end",
+        "tokens"
+      ],
+      "title": "ChunkSpan",
+      "type": "object"
+    },
+    "ChunkingEvent": {
+      "additionalProperties": false,
+      "properties": {
+        "duration_ms": {
+          "description": "Wall-clock time spent computing this phase",
+          "type": "number"
+        },
+        "phase": {
+          "const": "chunking",
+          "default": "chunking",
+          "type": "string"
+        },
+        "preset": {
+          "description": "Chunk-set id, e.g. 'sentence-256-38'",
+          "type": "string"
+        },
+        "precomputed": {
+          "description": "Loaded from build artifacts rather than computed now",
+          "type": "boolean"
+        },
+        "strategy": {
+          "enum": [
+            "sentence",
+            "fixed"
+          ],
+          "type": "string"
+        },
+        "chunk_size": {
+          "type": "integer"
+        },
+        "overlap": {
+          "type": "integer"
+        },
+        "n_docs": {
+          "type": "integer"
+        },
+        "n_chunks": {
+          "type": "integer"
+        },
+        "avg_tokens": {
+          "type": "number"
+        },
+        "focus_doc": {
+          "description": "Document shown in the chunking view",
+          "type": "string"
+        },
+        "focus_chunks": {
+          "items": {
+            "$ref": "#/$defs/ChunkSpan"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "duration_ms",
+        "phase",
+        "preset",
+        "precomputed",
+        "strategy",
+        "chunk_size",
+        "overlap",
+        "n_docs",
+        "n_chunks",
+        "avg_tokens",
+        "focus_doc",
+        "focus_chunks"
+      ],
+      "title": "ChunkingEvent",
+      "type": "object"
+    },
+    "Citation": {
+      "additionalProperties": false,
+      "properties": {
+        "n": {
+          "type": "integer"
+        },
+        "chunk": {
+          "type": "integer"
+        },
+        "doc": {
+          "type": "string"
+        },
+        "start": {
+          "description": "Evidence span in the document",
+          "type": "integer"
+        },
+        "end": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "n",
+        "chunk",
+        "doc",
+        "start",
+        "end"
+      ],
+      "title": "Citation",
+      "type": "object"
+    },
+    "CorpusRef": {
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "version": {
+          "description": "Content hash of the corpus",
+          "type": "string"
+        },
+        "n_docs": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "name",
+        "version",
+        "n_docs"
+      ],
+      "title": "CorpusRef",
+      "type": "object"
+    },
+    "EmbeddingEvent": {
+      "additionalProperties": false,
+      "properties": {
+        "duration_ms": {
+          "description": "Wall-clock time spent computing this phase",
+          "type": "number"
+        },
+        "phase": {
+          "const": "embedding",
+          "default": "embedding",
+          "type": "string"
+        },
+        "precomputed": {
+          "type": "boolean"
+        },
+        "model": {
+          "type": "string"
+        },
+        "dim": {
+          "type": "integer"
+        },
+        "pooling": {
+          "enum": [
+            "cls",
+            "mean"
+          ],
+          "type": "string"
+        },
+        "normalized": {
+          "type": "boolean"
+        },
+        "n_vectors": {
+          "type": "integer"
+        },
+        "samples": {
+          "items": {
+            "$ref": "#/$defs/VectorSample"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "duration_ms",
+        "phase",
+        "precomputed",
+        "model",
+        "dim",
+        "pooling",
+        "normalized",
+        "n_vectors",
+        "samples"
+      ],
+      "title": "EmbeddingEvent",
+      "type": "object"
+    },
+    "GenerationEvent": {
+      "additionalProperties": false,
+      "properties": {
+        "duration_ms": {
+          "description": "Wall-clock time spent computing this phase",
+          "type": "number"
+        },
+        "phase": {
+          "const": "generation",
+          "default": "generation",
+          "type": "string"
+        },
+        "generator": {
+          "enum": [
+            "scripted",
+            "extractive"
+          ],
+          "type": "string"
+        },
+        "simulated": {
+          "default": true,
+          "type": "boolean"
+        },
+        "status": {
+          "enum": [
+            "answered",
+            "partial",
+            "refused"
+          ],
+          "type": "string"
+        },
+        "tokens": {
+          "items": {
+            "$ref": "#/$defs/AnswerToken"
+          },
+          "type": "array"
+        },
+        "citations": {
+          "items": {
+            "$ref": "#/$defs/Citation"
+          },
+          "type": "array"
+        },
+        "missing": {
+          "description": "Topics the retrieved context did not cover",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "no_rag": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/NoRagAnswer"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "duration_ms",
+        "phase",
+        "generator",
+        "simulated",
+        "status",
+        "tokens",
+        "citations",
+        "missing",
+        "no_rag"
+      ],
+      "title": "GenerationEvent",
+      "type": "object"
+    },
+    "IndexingEvent": {
+      "additionalProperties": false,
+      "properties": {
+        "duration_ms": {
+          "description": "Wall-clock time spent computing this phase",
+          "type": "number"
+        },
+        "phase": {
+          "const": "indexing",
+          "default": "indexing",
+          "type": "string"
+        },
+        "index": {
+          "const": "exact-cosine",
+          "default": "exact-cosine",
+          "type": "string"
+        },
+        "n_vectors": {
+          "type": "integer"
+        },
+        "dim": {
+          "type": "integer"
+        },
+        "bytes": {
+          "type": "integer"
+        },
+        "projection": {
+          "$ref": "#/$defs/ProjectionInfo"
+        }
+      },
+      "required": [
+        "duration_ms",
+        "phase",
+        "index",
+        "n_vectors",
+        "dim",
+        "bytes",
+        "projection"
+      ],
+      "title": "IndexingEvent",
+      "type": "object"
+    },
+    "NoRagAnswer": {
+      "additionalProperties": false,
+      "properties": {
+        "text": {
+          "type": "string"
+        },
+        "illustrative": {
+          "description": "Hand-written illustration, not model output",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "text",
+        "illustrative"
+      ],
+      "title": "NoRagAnswer",
+      "type": "object"
+    },
+    "Params": {
+      "additionalProperties": false,
+      "description": "User-controllable pipeline parameters.",
+      "properties": {
+        "chunk_size": {
+          "default": 256,
+          "description": "Max tokens per chunk",
+          "maximum": 512,
+          "minimum": 16,
+          "type": "integer"
+        },
+        "overlap": {
+          "default": 38,
+          "description": "Max tokens shared by neighbouring chunks",
+          "maximum": 256,
+          "minimum": 0,
+          "type": "integer"
+        },
+        "strategy": {
+          "default": "sentence",
+          "enum": [
+            "sentence",
+            "fixed"
+          ],
+          "type": "string"
+        },
+        "top_k": {
+          "default": 5,
+          "maximum": 20,
+          "minimum": 1,
+          "type": "integer"
+        },
+        "threshold": {
+          "default": 0.6,
+          "description": "Minimum cosine similarity",
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
+        },
+        "rerank": {
+          "default": false,
+          "type": "boolean"
+        },
+        "rerank_pool": {
+          "default": 20,
+          "description": "Candidates given to the reranker",
+          "maximum": 50,
+          "minimum": 1,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "chunk_size",
+        "overlap",
+        "strategy",
+        "top_k",
+        "threshold",
+        "rerank",
+        "rerank_pool"
+      ],
+      "title": "Params",
+      "type": "object"
+    },
+    "Point": {
+      "additionalProperties": false,
+      "properties": {
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "x",
+        "y"
+      ],
+      "title": "Point",
+      "type": "object"
+    },
+    "ProjectionInfo": {
+      "additionalProperties": false,
+      "properties": {
+        "method": {
+          "const": "umap",
+          "default": "umap",
+          "type": "string"
+        },
+        "n_neighbors": {
+          "type": "integer"
+        },
+        "min_dist": {
+          "type": "number"
+        },
+        "metric": {
+          "const": "cosine",
+          "default": "cosine",
+          "type": "string"
+        },
+        "fitted_on": {
+          "description": "Preset the UMAP model was fitted on",
+          "type": "string"
+        }
+      },
+      "required": [
+        "method",
+        "n_neighbors",
+        "min_dist",
+        "metric",
+        "fitted_on"
+      ],
+      "title": "ProjectionInfo",
+      "type": "object"
+    },
+    "PromptChunk": {
+      "additionalProperties": false,
+      "properties": {
+        "n": {
+          "description": "1-based source number used in citations",
+          "type": "integer"
+        },
+        "chunk": {
+          "type": "integer"
+        },
+        "doc": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "tokens": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "n",
+        "chunk",
+        "doc",
+        "title",
+        "tokens"
+      ],
+      "title": "PromptChunk",
+      "type": "object"
+    },
+    "PromptEvent": {
+      "additionalProperties": false,
+      "properties": {
+        "duration_ms": {
+          "description": "Wall-clock time spent computing this phase",
+          "type": "number"
+        },
+        "phase": {
+          "const": "prompt",
+          "default": "prompt",
+          "type": "string"
+        },
+        "template": {
+          "type": "string"
+        },
+        "context": {
+          "items": {
+            "$ref": "#/$defs/PromptChunk"
+          },
+          "type": "array"
+        },
+        "text": {
+          "type": "string"
+        },
+        "token_counts": {
+          "$ref": "#/$defs/TokenCounts"
+        },
+        "tokenizer": {
+          "type": "string"
+        },
+        "approximate": {
+          "default": true,
+          "description": "Counts use the embedding tokenizer",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "duration_ms",
+        "phase",
+        "template",
+        "context",
+        "text",
+        "token_counts",
+        "tokenizer",
+        "approximate"
+      ],
+      "title": "PromptEvent",
+      "type": "object"
+    },
+    "QueryEvent": {
+      "additionalProperties": false,
+      "properties": {
+        "duration_ms": {
+          "description": "Wall-clock time spent computing this phase",
+          "type": "number"
+        },
+        "phase": {
+          "const": "query",
+          "default": "query",
+          "type": "string"
+        },
+        "text": {
+          "type": "string"
+        },
+        "tokens": {
+          "description": "WordPiece tokens fed to the embedding model",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "preview": {
+          "items": {
+            "type": "number"
+          },
+          "type": "array"
+        },
+        "position": {
+          "$ref": "#/$defs/Point"
+        },
+        "projection_neighbors": {
+          "description": "Chunks used to place the query in 2D",
+          "items": {
+            "type": "integer"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "duration_ms",
+        "phase",
+        "text",
+        "tokens",
+        "preview",
+        "position",
+        "projection_neighbors"
+      ],
+      "title": "QueryEvent",
+      "type": "object"
+    },
+    "RerankEvent": {
+      "additionalProperties": false,
+      "properties": {
+        "duration_ms": {
+          "description": "Wall-clock time spent computing this phase",
+          "type": "number"
+        },
+        "phase": {
+          "const": "rerank",
+          "default": "rerank",
+          "type": "string"
+        },
+        "enabled": {
+          "type": "boolean"
+        },
+        "model": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "items": {
+          "items": {
+            "$ref": "#/$defs/RerankItem"
+          },
+          "type": "array"
+        },
+        "selected": {
+          "items": {
+            "type": "integer"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "duration_ms",
+        "phase",
+        "enabled",
+        "model",
+        "items",
+        "selected"
+      ],
+      "title": "RerankEvent",
+      "type": "object"
+    },
+    "RerankItem": {
+      "additionalProperties": false,
+      "properties": {
+        "chunk": {
+          "type": "integer"
+        },
+        "retrieval_rank": {
+          "type": "integer"
+        },
+        "rerank_rank": {
+          "type": "integer"
+        },
+        "retrieval_score": {
+          "type": "number"
+        },
+        "rerank_score": {
+          "description": "Cross-encoder logit",
+          "type": "number"
+        },
+        "relevance": {
+          "description": "sigmoid(rerank_score)",
+          "type": "number"
+        }
+      },
+      "required": [
+        "chunk",
+        "retrieval_rank",
+        "rerank_rank",
+        "retrieval_score",
+        "rerank_score",
+        "relevance"
+      ],
+      "title": "RerankItem",
+      "type": "object"
+    },
+    "RetrievalEvent": {
+      "additionalProperties": false,
+      "properties": {
+        "duration_ms": {
+          "description": "Wall-clock time spent computing this phase",
+          "type": "number"
+        },
+        "phase": {
+          "const": "retrieval",
+          "default": "retrieval",
+          "type": "string"
+        },
+        "metric": {
+          "const": "cosine",
+          "default": "cosine",
+          "type": "string"
+        },
+        "top_k": {
+          "type": "integer"
+        },
+        "threshold": {
+          "type": "number"
+        },
+        "n_scanned": {
+          "type": "integer"
+        },
+        "candidates": {
+          "items": {
+            "$ref": "#/$defs/Candidate"
+          },
+          "type": "array"
+        },
+        "selected": {
+          "description": "Chunks passed on (top-k above threshold)",
+          "items": {
+            "type": "integer"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "duration_ms",
+        "phase",
+        "metric",
+        "top_k",
+        "threshold",
+        "n_scanned",
+        "candidates",
+        "selected"
+      ],
+      "title": "RetrievalEvent",
+      "type": "object"
+    },
+    "TokenCounts": {
+      "additionalProperties": false,
+      "properties": {
+        "system": {
+          "type": "integer"
+        },
+        "context": {
+          "type": "integer"
+        },
+        "question": {
+          "type": "integer"
+        },
+        "total": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "system",
+        "context",
+        "question",
+        "total"
+      ],
+      "title": "TokenCounts",
+      "type": "object"
+    },
+    "VectorSample": {
+      "additionalProperties": false,
+      "properties": {
+        "chunk": {
+          "type": "integer"
+        },
+        "preview": {
+          "description": "First dimensions of the vector",
+          "items": {
+            "type": "number"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "chunk",
+        "preview"
+      ],
+      "title": "VectorSample",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1",
+      "default": "1",
+      "type": "string"
+    },
+    "id": {
+      "description": "Deterministic hash of question, params and corpus",
+      "type": "string"
+    },
+    "created_at": {
+      "type": "string"
+    },
+    "source": {
+      "enum": [
+        "live",
+        "replay"
+      ],
+      "type": "string"
+    },
+    "engine": {
+      "enum": [
+        "python",
+        "browser"
+      ],
+      "type": "string"
+    },
+    "corpus": {
+      "$ref": "#/$defs/CorpusRef"
+    },
+    "question": {
+      "type": "string"
+    },
+    "params": {
+      "$ref": "#/$defs/Params"
+    },
+    "events": {
+      "items": {
+        "discriminator": {
+          "mapping": {
+            "chunking": "#/$defs/ChunkingEvent",
+            "embedding": "#/$defs/EmbeddingEvent",
+            "generation": "#/$defs/GenerationEvent",
+            "indexing": "#/$defs/IndexingEvent",
+            "prompt": "#/$defs/PromptEvent",
+            "query": "#/$defs/QueryEvent",
+            "rerank": "#/$defs/RerankEvent",
+            "retrieval": "#/$defs/RetrievalEvent"
+          },
+          "propertyName": "phase"
+        },
+        "oneOf": [
+          {
+            "$ref": "#/$defs/ChunkingEvent"
+          },
+          {
+            "$ref": "#/$defs/EmbeddingEvent"
+          },
+          {
+            "$ref": "#/$defs/IndexingEvent"
+          },
+          {
+            "$ref": "#/$defs/QueryEvent"
+          },
+          {
+            "$ref": "#/$defs/RetrievalEvent"
+          },
+          {
+            "$ref": "#/$defs/RerankEvent"
+          },
+          {
+            "$ref": "#/$defs/PromptEvent"
+          },
+          {
+            "$ref": "#/$defs/GenerationEvent"
+          }
+        ]
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "schema_version",
+    "id",
+    "created_at",
+    "source",
+    "engine",
+    "corpus",
+    "question",
+    "params",
+    "events"
+  ],
+  "title": "Trace",
+  "type": "object"
+}

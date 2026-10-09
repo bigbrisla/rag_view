@@ -1,0 +1,47 @@
+The Space Launch System (SLS) is an American two-stage super heavy-lift expendable launch vehicle used by NASA. The primary launch vehicle for the Artemis program, SLS is designed to launch the four-person Orion spacecraft. The rocket first launched in November 2022, carrying the uncrewed Artemis I mission. Its only crewed launch has been for the Artemis II lunar flyby in April 2026, becoming the second launch vehicle to carry humans beyond low Earth orbit (LEO), after NASA's Saturn V of the Apollo program.
+
+Development of SLS began in 2011 as a congressionally mandated replacement for the retiring Space Shuttle program and the cancelled Ares I and Ares V launch vehicles of the Constellation program, incorporating some hardware from both programs. Costing US$31.6 billion as of 2025, the project has been criticized for mismanagement, budget overruns, and delays, but ultimately succeeded in human spaceflight in 2026.
+
+All SLS launches take place from Launch Complex 39B at the Kennedy Space Center in Florida. The new Boeing-built core stage is powered by four ex-Shuttle RS-25 engines. Attached to the core are two Northrop Grumman five-segment Solid Rocket Boosters, built for the Ares vehicles, tested on Ares I-X, developed from the Shuttle's four-segment SRB. SLS currently uses the Interim Cryogenic Propulsion Stage (ICPS) as its second stage, for the insertions to low Earth orbit and trans-lunar injection. ICPS uses the RL10 engine, and was derived from the Delta Cryogenic Second Stage designed by Japan's space agency. Aerojet Rocketdyne builds the RS-25 and RL10 engines.
+
+Starting from Artemis V, no earlier than late 2028, SLS will use the Centaur V upper stage, developed for the Vulcan Centaur, instead of ICPS. NASA previously planned to upgrade SLS from its current Block 1 configuration to a Block 1B and Block 2, but cancelled these plans in February 2026, aiming to standardize on Block 1, to "reduce risk and maintain schedule stability". Block 1B was to use the Exploration Upper Stage, and Block 2 would have used new solid rocket boosters.
+
+While SLS has the highest liftoff thrust of any rocket to ever carry humans, 39 meganewtons (8,800,000 pounds-force), SLS's payload capacity to trans-lunar injection of 27 metric tons (59,525 lb) is only around half that of the Saturn V's 48.6 metric tons (107,145 lb) payload. Thus for Artemis lunar landings, beginning with Artemis IV targeted early 2028, Orion is planned to dock with the Human Landing System (HLS) in lunar orbit or low Earth orbit, separately launched on a non-SLS rocket; SpaceX's Starship HLS and Blue Origin's Blue Moon are under development as HLS vehicles.
+
+Its next scheduled flight is Artemis III, a 2027 low Earth orbit docking test between Orion and HLS vehicles. Beginning with Artemis V, NASA will transfer SLS operations to the Deep Space Transport LLC, a commercial launch provider consortium of Boeing and Northrop Grumman.
+
+The SLS is a Space Shuttle-derived launch vehicle. Its first stage consists of a central core stage powered by four engines, flanked by two space shuttle-derived solid rocket boosters.
+
+NASA had planned to introduce upgraded variants of the rocket. The Block 1B configuration was to incorporate a larger, purpose-built upper stage, while the Block 2 configuration was to feature newly developed solid rocket boosters. On February 26, 2026, NASA announced that it would standardize the Block 1 configuration and pursue alternative upper-stage options.
+
+The SLS core stage is built by Boeing at NASA's Michoud Assembly Facility in New Orleans. It measures 65 meters (213 ft) in length and 8.4 meters (28 ft) in diameter, matching the diameter of the Space Shuttle external tank to allow NASA to leverage Shuttle-era experience. The stage is visually similar to the Shuttle tank due to its rust-colored spray-on insulation.
+
+The stage contains liquid hydrogen and liquid oxygen propellant tanks, the attach points for the solid rocket boosters, avionics, equipment for autogenous pressurization of the tanks, and the Main Propulsion System (MPS), an assembly of four RS-25 engines with associated plumbing and hydraulic gimbal actuators. The first core stages reused MPS plumbing removed from the three remaining Space Shuttle orbiters following their decommissioning. The core stage, when combined with the solid rocket boosters, is capable of propelling the Orion spacecraft into a highly elliptical orbit without the upper stage firing, though the upper stage is required for trans-lunar injection.
+
+The core stage structure is primarily made of 2219 aluminum alloy, and compared to the Space Shuttle external tank, several manufacturing improvements were incorporated. Production began in 2014, but delays in manufacturing, testing, and integration postponed the readiness of the first flight article by several years. It uses ten barrel-shaped main sections, four domes, and seven rings.
+
+The first four SLS missions will each use four of the remaining fourteen RS-25D engines left over from the Space Shuttle program. The final two engines needed were assembled from existing RS-25D spare parts. Aerojet Rocketdyne refurbished these engines with modernized controllers, expanded throttle capability, and additional insulation to handle the higher thermal environment caused by proximity to the solid rocket boosters. Later flights will transition to the RS-25E, optimized for expendable use, being faster to build and costing 30% less. Thrust for the refurbished RS-25D engines has been increased from 492,000 to 513,000 lbf (2,188 to 2,281 kN), while the RS-25E is rated at 522,000 lbf (2,321 kN) per engine. The first test firing of an RS-25E occurred in June 2025 and was declared successful.
+
+The SLS uses a conical frustum-shaped interstage known as the Launch Vehicle Stage Adapter (LVSA) between the core stage and the narrower diameter upper stage. The LVSA consists of sixteen aluminum-lithium panels made of 2195 aluminum alloy and is built by Teledyne Brown Engineering. The first unit cost approximately $60 million, with the next two costing $85 million combined.
+
+The first eight SLS flights are planned to use two five-segment solid rocket boosters derived from the four-segment Space Shuttle Solid Rocket Booster manufactured by Northrop Grumman. The booster for the SLS incorporates casing segments previously flown as part of the Shuttle program, with the addition of a center segment to increase performance. The boosters feature updated avionics and lighter insulation but do not include a parachute recovery system, as they are expended after launch.
+
+The boosters are filled with an ammonium perchlorate composite propellant, consisting of aluminum powder (fuel) and ammonium perchlorate (oxidizer), bound together with polybutadiene acrylonitrile. The mixture has a rubber eraser-like consistency and is cast into each segment.
+
+At liftoff, the two boosters together produce more than 75 percent of the total thrust required to propel SLS. The five-segment configuration provides approximately 25 percent greater total impulse than the Shuttle-era boosters.
+
+The available inventory of Shuttle-era booster casing segments limits use of this configuration to eight SLS flights.
+
+The Booster Obsolescence and Life Extension (BOLE) program was announced in 2019 to develop replacement solid rocket boosters for SLS once the supply of Shuttle-derived hardware is exhausted. In 2021, NASA awarded Northrop Grumman a $3.2 billion contract to produce Shuttle-derived boosters for five missions (Artemis IV–VIII) and to design, develop, and test the new BOLE booster.
+
+The BOLE design replaces Shuttle-era steel motor cases with carbon-fiber composite cases, which are lighter and stronger. It also substitutes the hydraulic thrust vector control system with an electronic system and uses a different propellant formulation derived from Northrop Grumman's commercial solid rocket motors.
+
+Each BOLE booster is designed to produce approximately 3.9 million lbf (17 MN) of thrust, about 19 percent greater than the five-segment Shuttle-derived boosters, thereby increasing overall payload capability.
+
+As of 2025, BOLE remains in development. A prototype was test-fired in June 2025 but experienced a nozzle failure approximately 15 seconds before the end of the motor firing. However, the long-term future of the program is uncertain: SLS was authorized for only five flights at that time, and no funding has been provided for production of operational BOLE boosters.
+
+The Interim Cryogenic Propulsion Stage (ICPS) is the upper stage used on the initial Block 1 configuration of the SLS. Three ICPS units were built by United Launch Alliance (ULA), a joint venture of Boeing and Lockheed Martin. The ICPS is derived from the Delta Cryogenic Second Stage (DCSS), incorporating minimal modifications for integration with SLS. Following the discontinuation of the DCSS, further ICPS production is no longer available as an option.
+
+The ICPS flown on Artemis I was powered by a single RL10B-2 engine, also built by Aerojet Rocketdyne. The ICPS units flown on Artemis II and planned for use on Artemis IV use a single RL10C-2.
+
+Artemis III will have no ICPS, as it is only a mission to low Earth orbit (LEO), and instead its ICPS will be used for Artemis IV.

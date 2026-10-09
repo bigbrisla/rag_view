@@ -1,0 +1,238 @@
+{
+ "schema_version": "1",
+ "corpus": {
+  "name": "space-exploration",
+  "version": "c7fba6e5bacf",
+  "n_docs": 47
+ },
+ "models": {
+  "embed": {
+   "id": "Xenova/bge-small-en-v1.5",
+   "dim": 384,
+   "pooling": "cls",
+   "file": "onnx/model_quantized.onnx",
+   "max_length": 512
+  },
+  "rerank": {
+   "id": "Xenova/ms-marco-MiniLM-L-6-v2",
+   "file": "onnx/model_quantized.onnx"
+  }
+ },
+ "projection": {
+  "method": "umap",
+  "n_neighbors": 15,
+  "min_dist": 0.1,
+  "fitted_on": "sentence-256-38"
+ },
+ "defaults": {
+  "chunk_size": 256,
+  "overlap": 38,
+  "strategy": "sentence",
+  "top_k": 5,
+  "threshold": 0.6,
+  "rerank": false,
+  "rerank_pool": 20
+ },
+ "sizes": [
+  48,
+  128,
+  256,
+  448
+ ],
+ "overlap_pct": [
+  0,
+  15,
+  30
+ ],
+ "presets": [
+  {
+   "id": "sentence-48-0",
+   "strategy": "sentence",
+   "chunk_size": 48,
+   "overlap": 0,
+   "n_chunks": 2507,
+   "bytes": 1925376
+  },
+  {
+   "id": "sentence-48-7",
+   "strategy": "sentence",
+   "chunk_size": 48,
+   "overlap": 7,
+   "n_chunks": 2511,
+   "bytes": 1928448
+  },
+  {
+   "id": "sentence-48-14",
+   "strategy": "sentence",
+   "chunk_size": 48,
+   "overlap": 14,
+   "n_chunks": 2586,
+   "bytes": 1986048
+  },
+  {
+   "id": "sentence-128-0",
+   "strategy": "sentence",
+   "chunk_size": 128,
+   "overlap": 0,
+   "n_chunks": 832,
+   "bytes": 638976
+  },
+  {
+   "id": "sentence-128-19",
+   "strategy": "sentence",
+   "chunk_size": 128,
+   "overlap": 19,
+   "n_chunks": 854,
+   "bytes": 655872
+  },
+  {
+   "id": "sentence-128-38",
+   "strategy": "sentence",
+   "chunk_size": 128,
+   "overlap": 38,
+   "n_chunks": 990,
+   "bytes": 760320
+  },
+  {
+   "id": "sentence-256-0",
+   "strategy": "sentence",
+   "chunk_size": 256,
+   "overlap": 0,
+   "n_chunks": 396,
+   "bytes": 304128
+  },
+  {
+   "id": "sentence-256-38",
+   "strategy": "sentence",
+   "chunk_size": 256,
+   "overlap": 38,
+   "n_chunks": 428,
+   "bytes": 328704
+  },
+  {
+   "id": "sentence-256-77",
+   "strategy": "sentence",
+   "chunk_size": 256,
+   "overlap": 77,
+   "n_chunks": 504,
+   "bytes": 387072
+  },
+  {
+   "id": "sentence-448-0",
+   "strategy": "sentence",
+   "chunk_size": 448,
+   "overlap": 0,
+   "n_chunks": 234,
+   "bytes": 179712
+  },
+  {
+   "id": "sentence-448-67",
+   "strategy": "sentence",
+   "chunk_size": 448,
+   "overlap": 67,
+   "n_chunks": 246,
+   "bytes": 188928
+  },
+  {
+   "id": "sentence-448-134",
+   "strategy": "sentence",
+   "chunk_size": 448,
+   "overlap": 134,
+   "n_chunks": 287,
+   "bytes": 220416
+  },
+  {
+   "id": "fixed-256-38",
+   "strategy": "fixed",
+   "chunk_size": 256,
+   "overlap": 38,
+   "n_chunks": 429,
+   "bytes": 329472
+  }
+ ],
+ "traces": [
+  {
+   "id": "q-voyager-interstellar",
+   "trace_id": "b5c7a92326be9c10",
+   "question": "When did Voyager 1 enter interstellar space?",
+   "params": {},
+   "file": "traces/q-voyager-interstellar.json"
+  },
+  {
+   "id": "q-apollo-13",
+   "trace_id": "b24821eb15f07f9c",
+   "question": "Why was the Apollo 13 Moon landing aborted?",
+   "params": {},
+   "file": "traces/q-apollo-13.json"
+  },
+  {
+   "id": "q-hamilton",
+   "trace_id": "1fc484edd01b7d33",
+   "question": "What did Margaret Hamilton contribute to the Apollo program?",
+   "params": {},
+   "file": "traces/q-hamilton.json"
+  },
+  {
+   "id": "q-europa",
+   "trace_id": "3031d97c791cb53c",
+   "question": "Could Europa have liquid water?",
+   "params": {},
+   "file": "traces/q-europa.json"
+  },
+  {
+   "id": "q-mercury-ambiguous",
+   "trace_id": "85fd44fc15d32ae5",
+   "question": "When was Mercury first explored?",
+   "params": {},
+   "file": "traces/q-mercury-ambiguous.json"
+  },
+  {
+   "id": "q-titan-gemini",
+   "trace_id": "b8ec8c144ad43581",
+   "question": "Which Titan launched the Gemini astronauts?",
+   "params": {},
+   "file": "traces/q-titan-gemini.json"
+  },
+  {
+   "id": "q-pizza",
+   "trace_id": "8377fb12f342a645",
+   "question": "What is the best pizza in Naples?",
+   "params": {},
+   "file": "traces/q-pizza.json"
+  },
+  {
+   "id": "fc-tiny-chunks",
+   "trace_id": "7d1659db7579c243",
+   "question": "Why was the Apollo 13 Moon landing aborted?",
+   "params": {
+    "chunk_size": 48,
+    "overlap": 0,
+    "top_k": 3
+   },
+   "file": "traces/fc-tiny-chunks.json"
+  },
+  {
+   "id": "fc-ambiguous",
+   "trace_id": "85fd44fc15d32ae5",
+   "question": "When was Mercury first explored?",
+   "params": {},
+   "file": "traces/fc-ambiguous.json"
+  },
+  {
+   "id": "fc-out-of-corpus",
+   "trace_id": "8377fb12f342a645",
+   "question": "What is the best pizza in Naples?",
+   "params": {},
+   "file": "traces/fc-out-of-corpus.json"
+  },
+  {
+   "id": "fc-rerank-titan",
+   "trace_id": "3d25d3ba6e80e485",
+   "question": "Which Titan launched the Gemini astronauts?",
+   "params": {
+    "rerank": true
+   },
+   "file": "traces/fc-rerank-titan.json"
+  }
+ ]
+}

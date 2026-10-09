@@ -1,0 +1,25 @@
+# `docker compose up` serves the site on http://localhost:8080 using the
+# committed artifacts. `docker compose run --rm pipeline` rebuilds them
+# (add `eval` or `trace "your question"` to run other pipeline commands).
+services:
+  web:
+    build:
+      context: .
+      dockerfile: web/Dockerfile
+    ports:
+      - "8080:80"
+
+  pipeline:
+    build:
+      context: .
+      dockerfile: pipeline/Dockerfile
+    profiles: ["pipeline"]
+    volumes:
+      - ./corpus:/repo/corpus
+      - ./eval:/repo/eval
+      - ./shared:/repo/shared
+      - ./web/public/data:/repo/web/public/data
+      - hf-cache:/cache/hf
+
+volumes:
+  hf-cache:

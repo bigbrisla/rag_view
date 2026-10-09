@@ -1,0 +1,108 @@
+/*
+ * Design tokens. Dark is the default ("deep space"); light is a paper star atlas.
+ * Category colours: the reference data-viz palette, slots 1-5, stepped per mode.
+ * Five hues on a scatter cannot all be told apart by colour alone, so every
+ * category also has its own marker shape and a direct label on the map.
+ */
+:root {
+  color-scheme: dark;
+  --font-sans: 'Inter Variable', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-display: 'Instrument Serif', Georgia, serif;
+  --font-mono: 'JetBrains Mono Variable', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  --bg: #07090f;
+  --surface: #0b0f17;
+  --panel: #0f131c;
+  --panel-2: #151a25;
+  --border: rgba(255, 255, 255, 0.09);
+  --border-strong: rgba(255, 255, 255, 0.18);
+  --ink: #f3f0e8;
+  --ink-2: #bdb9ae;
+  --muted: #858278;
+  --grid: rgba(255, 255, 255, 0.045);
+  --wash: rgba(255, 255, 255, 0.05);
+  --focus: #f3f0e8;
+
+  --cat-bodies: #3987e5;
+  --cat-robotic: #d95926;
+  --cat-crewed: #199e70;
+  --cat-rockets: #c98500;
+  --cat-people: #d55181;
+
+  --status-good: #0ca30c;
+  --status-warning: #fab219;
+  --status-critical: #d03b3b;
+
+  --chunk-a: rgba(57, 135, 229, 0.2);
+  --chunk-b: rgba(201, 133, 0, 0.2);
+  --chunk-overlap: rgba(243, 240, 232, 0.28);
+  --chunk-edge: rgba(243, 240, 232, 0.55);
+
+  --seg-system: #7d7b75;
+  --seg-context: #3987e5;
+  --seg-question: #c98500;
+
+  --radius: 14px;
+  --radius-sm: 8px;
+  --shadow: 0 24px 60px -24px rgba(0, 0, 0, 0.6);
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme='dark']) {
+    color-scheme: light;
+    --bg: #f3f1ea;
+    --surface: #fbfaf6;
+    --panel: #ffffff;
+    --panel-2: #f7f5ef;
+    --border: rgba(20, 19, 15, 0.1);
+    --border-strong: rgba(20, 19, 15, 0.2);
+    --ink: #14130f;
+    --ink-2: #52514e;
+    --muted: #7a7872;
+    --grid: rgba(20, 19, 15, 0.06);
+    --wash: rgba(20, 19, 15, 0.04);
+    --focus: #14130f;
+    --cat-bodies: #2a78d6;
+    --cat-robotic: #eb6834;
+    --cat-crewed: #1baf7a;
+    --cat-rockets: #eda100;
+    --cat-people: #e87ba4;
+    --chunk-a: rgba(42, 120, 214, 0.14);
+    --chunk-b: rgba(237, 161, 0, 0.18);
+    --chunk-overlap: rgba(20, 19, 15, 0.16);
+    --chunk-edge: rgba(20, 19, 15, 0.45);
+    --seg-system: #898781;
+    --seg-context: #2a78d6;
+    --seg-question: #eda100;
+    --shadow: 0 24px 60px -30px rgba(20, 19, 15, 0.25);
+  }
+}
+
+:root[data-theme='light'] {
+  color-scheme: light;
+  --bg: #f3f1ea;
+  --surface: #fbfaf6;
+  --panel: #ffffff;
+  --panel-2: #f7f5ef;
+  --border: rgba(20, 19, 15, 0.1);
+  --border-strong: rgba(20, 19, 15, 0.2);
+  --ink: #14130f;
+  --ink-2: #52514e;
+  --muted: #7a7872;
+  --grid: rgba(20, 19, 15, 0.06);
+  --wash: rgba(20, 19, 15, 0.04);
+  --focus: #14130f;
+  --cat-bodies: #2a78d6;
+  --cat-robotic: #eb6834;
+  --cat-crewed: #1baf7a;
+  --cat-rockets: #eda100;
+  --cat-people: #e87ba4;
+  --chunk-a: rgba(42, 120, 214, 0.14);
+  --chunk-b: rgba(237, 161, 0, 0.18);
+  --chunk-overlap: rgba(20, 19, 15, 0.16);
+  --chunk-edge: rgba(20, 19, 15, 0.45);
+  --seg-system: #898781;
+  --seg-context: #2a78d6;
+  --seg-question: #eda100;
+  --shadow: 0 24px 60px -30px rgba(20, 19, 15, 0.25);
+}
